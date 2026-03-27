@@ -36,7 +36,7 @@ export default function Header({ locale }: { locale: string }) {
           <Link href={`/${locale}/blog`} className="transition-colors hover:text-primary">
             {t("blog")}
           </Link>
-          <Link href={`/${locale}#about`} className="transition-colors hover:text-primary">
+          <Link href={`/${locale}/about`} className="transition-colors hover:text-primary">
             {t("about")}
           </Link>
           <Link href={`/${locale}#programs`} className="transition-colors hover:text-primary">
@@ -45,7 +45,7 @@ export default function Header({ locale }: { locale: string }) {
           <Link href={`/${locale}#partnership`} className="transition-colors hover:text-primary">
             {t("partnership")}
           </Link>
-          <Link href={`/${locale}#faculty`} className="transition-colors hover:text-primary">
+          <Link href={`/${locale}/faculty`} className="transition-colors hover:text-primary">
             {t("faculty")}
           </Link>
           <Link href={`/${locale}#insights`} className="transition-colors hover:text-primary">
