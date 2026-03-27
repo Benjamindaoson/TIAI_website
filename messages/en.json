@@ -93,7 +93,10 @@
     "subtitle": "Updates, research, and announcements from TIAI.",
     "empty": "No posts available yet. Check back soon.",
     "readMore": "Read more",
-    "fallbackBanner": "This article is not available in your language. Showing English version."
+    "fallbackBanner": "This article is not available in your language. Showing English version.",
+    "page": "Page",
+    "prevPage": "← Previous",
+    "nextPage": "Next →"
   },
   "Programs": {
     "ai-ml": {

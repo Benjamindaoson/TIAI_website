@@ -2,10 +2,22 @@ import { getAllPostMeta } from '@/lib/mdx'
 import { getTranslations } from 'next-intl/server'
 import Link from 'next/link'
 
-export default async function BlogPage({ params }: { params: Promise<{ lang: string }> }) {
+const POSTS_PER_PAGE = 8
+
+export default async function BlogPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ lang: string }>
+  searchParams: Promise<{ page?: string }>
+}) {
   const { lang } = await params
+  const { page: pageParam } = await searchParams
   const t = await getTranslations('Blog')
-  const posts = getAllPostMeta(lang)
+  const allPosts = getAllPostMeta(lang)
+  const page = Math.max(1, parseInt(pageParam ?? '1', 10))
+  const totalPages = Math.ceil(allPosts.length / POSTS_PER_PAGE)
+  const posts = allPosts.slice((page - 1) * POSTS_PER_PAGE, page * POSTS_PER_PAGE)
 
   return (
     <section className="container mx-auto px-4 py-16 max-w-4xl">
@@ -31,6 +43,21 @@ export default async function BlogPage({ params }: { params: Promise<{ lang: str
               </div>
             </article>
           ))}
+        </div>
+      )}
+      {totalPages > 1 && (
+        <div className="flex items-center justify-center gap-4 mt-12">
+          {page > 1 && (
+            <Link href={`/${lang}/blog?page=${page - 1}`} className="text-slate-400 hover:text-slate-200">
+              {t('prevPage')}
+            </Link>
+          )}
+          <span className="text-slate-500 text-sm">{t('page')} {page} / {totalPages}</span>
+          {page < totalPages && (
+            <Link href={`/${lang}/blog?page=${page + 1}`} className="text-slate-400 hover:text-slate-200">
+              {t('nextPage')}
+            </Link>
+          )}
         </div>
       )}
     </section>

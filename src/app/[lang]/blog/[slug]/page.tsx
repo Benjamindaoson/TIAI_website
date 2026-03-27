@@ -1,8 +1,40 @@
+import type { Metadata } from 'next'
 import { getPost, getAllSlugs } from '@/lib/mdx'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { getTranslations } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://texasinstituteofai.org'
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; slug: string }>
+}): Promise<Metadata> {
+  const { lang, slug } = await params
+  let post = getPost(slug, lang)
+  if (!post && lang === 'zh') post = getPost(slug, 'en')
+  if (!post) return {}
+  return {
+    title: `${post.title} | TIAI`,
+    description: post.excerpt,
+    alternates: {
+      canonical: `${siteUrl}/${lang}/blog/${slug}`,
+      languages: {
+        en: `${siteUrl}/en/blog/${slug}`,
+        zh: `${siteUrl}/zh/blog/${slug}`,
+      },
+    },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: `${siteUrl}/${lang}/blog/${slug}`,
+      type: 'article',
+      publishedTime: post.date,
+    },
+  }
+}
 
 export async function generateStaticParams() {
   return getAllSlugs()
