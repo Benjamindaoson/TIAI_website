@@ -88,7 +88,7 @@
     "nonprofit": "TIAI is a non-profit educational initiative."
   },
   "Blog": {
-      "backToNews": "Back to News",
+    "backToNews": "Back to News",
     "title": "News & Insights",
     "subtitle": "Updates, research, and announcements from TIAI.",
     "empty": "No posts available yet. Check back soon.",
@@ -97,25 +97,136 @@
   },
   "Programs": {
     "ai-ml": {
-      "hero": { "title": "Artificial Intelligence & Machine Learning", "tagline": "From foundations to deployment: modern AI methods, model systems, and applied practice.", "cta": "Apply Now" },
-      "overview": { "title": "Program Overview", "goal": "Prepare students for careers in AI engineering, data science, and ML operations.", "audience": "International students seeking a U.S. transfer pathway with a focus on AI careers." },
-      "courses": { "title": "Curriculum" },
-      "outcomes": { "title": "Learning Outcomes" },
-      "requirements": { "title": "Admission Requirements" }
+      "hero": {
+        "title": "Artificial Intelligence & Machine Learning",
+        "tagline": "From foundations to deployment: modern AI methods, model systems, and applied practice.",
+        "cta": "Apply Now"
+      },
+      "overview": {
+        "title": "Program Overview",
+        "goal": "Prepare students for careers in AI engineering, data science, and ML operations.",
+        "audience": "International students seeking a U.S. transfer pathway with a focus on AI careers."
+      },
+      "courses": {
+        "title": "Curriculum",
+        "coreList": [
+          "Introduction to Machine Learning",
+          "Deep Learning & Neural Networks",
+          "Natural Language Processing",
+          "Computer Vision",
+          "MLOps & Model Deployment"
+        ],
+        "electiveList": [
+          "Reinforcement Learning",
+          "AI Ethics & Policy",
+          "Applied Statistics"
+        ]
+      },
+      "outcomes": {
+        "title": "Learning Outcomes",
+        "items": [
+          "Build and deploy production ML models",
+          "Work with real-world datasets at scale",
+          "Apply AI to solve domain-specific problems",
+          "Contribute to open-source AI projects"
+        ]
+      },
+      "requirements": {
+        "title": "Admission Requirements",
+        "items": [
+          "Bachelor's degree or equivalent",
+          "English proficiency (TOEFL 80+ or IELTS 6.5+)",
+          "Basic programming experience (Python preferred)"
+        ]
+      }
     },
     "cs": {
-      "hero": { "title": "Computer Science & Software Engineering", "tagline": "Transfer-aligned CS curriculum including algorithms, systems, and engineering methods.", "cta": "Apply Now" },
-      "overview": { "title": "Program Overview", "goal": "Build foundational CS competency aligned to U.S. university transfer requirements.", "audience": "Students seeking accredited U.S. CS credits through structured 2+2 transfer pathways." },
-      "courses": { "title": "Curriculum" },
-      "outcomes": { "title": "Learning Outcomes" },
-      "requirements": { "title": "Admission Requirements" }
+      "hero": {
+        "title": "Computer Science & Software Engineering",
+        "tagline": "Transfer-aligned CS curriculum including algorithms, systems, and engineering methods.",
+        "cta": "Apply Now"
+      },
+      "overview": {
+        "title": "Program Overview",
+        "goal": "Build foundational CS competency aligned to U.S. university transfer requirements.",
+        "audience": "Students seeking accredited U.S. CS credits through structured 2+2 transfer pathways."
+      },
+      "courses": {
+        "title": "Curriculum",
+        "coreList": [
+          "Data Structures & Algorithms",
+          "Operating Systems",
+          "Computer Networks",
+          "Software Engineering",
+          "Database Systems"
+        ],
+        "electiveList": [
+          "Cloud Computing",
+          "Cybersecurity Fundamentals",
+          "Mobile Application Development"
+        ]
+      },
+      "outcomes": {
+        "title": "Learning Outcomes",
+        "items": [
+          "Transfer to accredited U.S. CS programs",
+          "Solve algorithmic problems at industry standard",
+          "Design and build full-stack software systems",
+          "Apply software engineering best practices"
+        ]
+      },
+      "requirements": {
+        "title": "Admission Requirements",
+        "items": [
+          "High school diploma or equivalent",
+          "English proficiency (TOEFL 70+ or IELTS 6.0+)",
+          "Basic math background (pre-calculus or above)"
+        ]
+      }
     },
     "information-systems": {
-      "hero": { "title": "Information Systems", "tagline": "Business-aligned IS education connecting technology, data, and organizational needs.", "cta": "Apply Now" },
-      "overview": { "title": "Program Overview", "goal": "Develop IS professionals who can bridge technical and business domains.", "audience": "Students targeting careers in IT management, data analytics, or enterprise systems." },
-      "courses": { "title": "Curriculum" },
-      "outcomes": { "title": "Learning Outcomes" },
-      "requirements": { "title": "Admission Requirements" }
+      "hero": {
+        "title": "Information Systems",
+        "tagline": "Business-aligned IS education connecting technology, data, and organizational needs.",
+        "cta": "Apply Now"
+      },
+      "overview": {
+        "title": "Program Overview",
+        "goal": "Develop IS professionals who can bridge technical and business domains.",
+        "audience": "Students targeting careers in IT management, data analytics, or enterprise systems."
+      },
+      "courses": {
+        "title": "Curriculum",
+        "coreList": [
+          "Enterprise Information Systems",
+          "Business Intelligence & Analytics",
+          "Database Design & Administration",
+          "IT Project Management",
+          "Systems Analysis & Design"
+        ],
+        "electiveList": [
+          "Data Warehousing",
+          "ERP Systems",
+          "Digital Transformation Strategy"
+        ]
+      },
+      "outcomes": {
+        "title": "Learning Outcomes",
+        "items": [
+          "Design and implement enterprise information systems",
+          "Analyze business data to support decision-making",
+          "Manage IT projects using industry frameworks",
+          "Bridge technical and business stakeholder needs"
+        ]
+      },
+      "requirements": {
+        "title": "Admission Requirements",
+        "items": [
+          "Bachelor's degree or equivalent",
+          "English proficiency (TOEFL 75+ or IELTS 6.0+)",
+          "Basic understanding of business operations"
+        ]
+      }
     }
   },
   "Contact": {

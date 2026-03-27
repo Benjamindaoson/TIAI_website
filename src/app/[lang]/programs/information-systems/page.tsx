@@ -1,7 +1,30 @@
 import { getTranslations } from 'next-intl/server'
+import type { Metadata } from 'next'
 import ProgramPage from '@/components/ProgramPage'
 
-export default async function InformationSystemsPage({ params }: { params: Promise<{ lang: string }> }) {
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://texasinstituteofai.org'
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>
+}): Promise<Metadata> {
+  const { lang } = await params
+  const t = await getTranslations({ locale: lang, namespace: 'Programs.information-systems' })
+  return {
+    title: `${t('hero.title')} | TIAI`,
+    description: t('hero.tagline'),
+    alternates: {
+      canonical: `${siteUrl}/${lang}/programs/information-systems`,
+      languages: {
+        en: `${siteUrl}/en/programs/information-systems`,
+        zh: `${siteUrl}/zh/programs/information-systems`,
+      },
+    },
+  }
+}
+
+export default async function IsPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params
   const t = await getTranslations('Programs.information-systems')
   return (
@@ -11,35 +34,16 @@ export default async function InformationSystemsPage({ params }: { params: Promi
       overview={{ title: t('overview.title'), goal: t('overview.goal'), audience: t('overview.audience') }}
       courses={{
         title: t('courses.title'),
-        core: [
-          'Information Systems Analysis',
-          'Database Management',
-          'Business Intelligence & Analytics',
-          'IT Project Management',
-          'Enterprise Systems (ERP/CRM)',
-        ],
-        electives: [
-          'Data Visualization',
-          'Digital Transformation',
-          'Information Security Management',
-        ],
+        core: t.raw('courses.coreList') as string[],
+        electives: t.raw('courses.electiveList') as string[],
       }}
       outcomes={{
         title: t('outcomes.title'),
-        items: [
-          'Analyze and design information systems for organizations',
-          'Apply data analytics to business decisions',
-          'Manage IT projects using industry frameworks',
-          'Communicate technical concepts to non-technical stakeholders',
-        ],
+        items: t.raw('outcomes.items') as string[],
       }}
       requirements={{
         title: t('requirements.title'),
-        items: [
-          "Bachelor's degree or equivalent",
-          'English proficiency (TOEFL 75+ or IELTS 6.0+)',
-          'Basic familiarity with spreadsheets or databases',
-        ],
+        items: t.raw('requirements.items') as string[],
       }}
     />
   )

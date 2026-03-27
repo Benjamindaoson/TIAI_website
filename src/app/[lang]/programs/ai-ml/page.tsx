@@ -1,5 +1,28 @@
 import { getTranslations } from 'next-intl/server'
+import type { Metadata } from 'next'
 import ProgramPage from '@/components/ProgramPage'
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://texasinstituteofai.org'
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>
+}): Promise<Metadata> {
+  const { lang } = await params
+  const t = await getTranslations({ locale: lang, namespace: 'Programs.ai-ml' })
+  return {
+    title: `${t('hero.title')} | TIAI`,
+    description: t('hero.tagline'),
+    alternates: {
+      canonical: `${siteUrl}/${lang}/programs/ai-ml`,
+      languages: {
+        en: `${siteUrl}/en/programs/ai-ml`,
+        zh: `${siteUrl}/zh/programs/ai-ml`,
+      },
+    },
+  }
+}
 
 export default async function AiMlPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params
@@ -11,35 +34,16 @@ export default async function AiMlPage({ params }: { params: Promise<{ lang: str
       overview={{ title: t('overview.title'), goal: t('overview.goal'), audience: t('overview.audience') }}
       courses={{
         title: t('courses.title'),
-        core: [
-          'Introduction to Machine Learning',
-          'Deep Learning & Neural Networks',
-          'Natural Language Processing',
-          'Computer Vision',
-          'MLOps & Model Deployment',
-        ],
-        electives: [
-          'Reinforcement Learning',
-          'AI Ethics & Policy',
-          'Applied Statistics',
-        ],
+        core: t.raw('courses.coreList') as string[],
+        electives: t.raw('courses.electiveList') as string[],
       }}
       outcomes={{
         title: t('outcomes.title'),
-        items: [
-          'Build and deploy production ML models',
-          'Work with real-world datasets at scale',
-          'Apply AI to solve domain-specific problems',
-          'Contribute to open-source AI projects',
-        ],
+        items: t.raw('outcomes.items') as string[],
       }}
       requirements={{
         title: t('requirements.title'),
-        items: [
-          "Bachelor's degree or equivalent",
-          'English proficiency (TOEFL 80+ or IELTS 6.5+)',
-          'Basic programming experience (Python preferred)',
-        ],
+        items: t.raw('requirements.items') as string[],
       }}
     />
   )
