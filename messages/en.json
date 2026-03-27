@@ -248,5 +248,23 @@
     "submit": "Send Message",
     "sending": "Sending...",
     "successMessage": "Thank you! We will be in touch within 2 business days."
+  },
+  "Faculty": {
+    "heroTag": "Faculty & Advisors",
+    "heroTitle": "Join Our Founding Faculty Network",
+    "heroBody": "TIAI is building a distributed network of AI educators, researchers, and industry practitioners to co-deliver high-quality education programs across partner institutions.",
+    "whyTitle": "Why Join",
+    "role1Title": "Adjunct Instructor",
+    "role1Body": "Teach courses within accredited partner college programs. All instructors are credentialed and appointed through institutional processes.",
+    "role2Title": "Curriculum Advisor",
+    "role2Body": "Contribute to course design, learning outcomes, and industry alignment without a full teaching commitment.",
+    "role3Title": "Research Affiliate",
+    "role3Body": "Collaborate on applied AI research and educational case studies. Formal attribution provided.",
+    "benefit1": "Formal U.S. institutional affiliation",
+    "benefit2": "Priority access to paid teaching opportunities",
+    "benefit3": "Curriculum attribution and recognition",
+    "benefit4": "Network of AI practitioners and educators",
+    "ctaTitle": "Apply to the Faculty Network",
+    "ctaBody": "Submit your background and interest area. Our academic team will follow up within 5 business days."
   }
 }

@@ -46,5 +46,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.7,
     })),
+    // Static content pages
+    ...(['faculty', 'about', 'privacy', 'terms'] as const).flatMap((slug) =>
+      (['en', 'zh'] as const).map((lang) => ({
+        url: `${siteUrl}/${lang}/${slug}`,
+        lastModified: now,
+        changeFrequency: 'monthly' as const,
+        priority: 0.6,
+      }))
+    ),
   ];
 }
