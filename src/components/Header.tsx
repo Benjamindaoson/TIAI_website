@@ -9,6 +9,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Globe } from "lucide-react";
+import MobileMenu from "@/components/MobileMenu";
 
 export default function Header({ locale }: { locale: string }) {
   const t = useTranslations("Navigation");
@@ -64,18 +65,14 @@ export default function Header({ locale }: { locale: string }) {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuItem onClick={() => switchLocale('en')}>
-                English
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => switchLocale('zh')}>
-                中文
-              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => switchLocale('en')}>English</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => switchLocale('zh')}>中文</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          
           <Link href={`/${locale}#contact`} className="hidden md:block">
-             <Button>{t("contact")}</Button>
+            <Button>{t("contact")}</Button>
           </Link>
+          <MobileMenu locale={locale} />
         </div>
       </div>
     </header>
