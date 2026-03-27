@@ -23,7 +23,7 @@ export async function generateMetadata({
 }
 export default async function FacultyPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params
-  const t = await getTranslations('Faculty')
+  const t = await getTranslations({ locale: lang, namespace: 'Faculty' })
   const roles = [
     { title: t('role1Title'), body: t('role1Body') },
     { title: t('role2Title'), body: t('role2Body') },

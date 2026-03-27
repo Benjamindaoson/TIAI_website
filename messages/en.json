@@ -265,7 +265,8 @@
     "benefit3": "Curriculum attribution and recognition",
     "benefit4": "Network of AI practitioners and educators",
     "ctaTitle": "Apply to the Faculty Network",
-    "ctaBody": "Submit your background and interest area. Our academic team will follow up within 5 business days."
+    "ctaBody": "Submit your background and interest area. Our academic team will follow up within 5 business days.",
+    "ctaButton": "Apply Now"
   },
   "About": {
     "heroTag": "About TIAI",
