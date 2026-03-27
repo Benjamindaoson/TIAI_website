@@ -7,6 +7,7 @@ import "../globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
+import Analytics from "@/components/Analytics";
 
 const locales = ["en", "zh"] as const;
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://texasinstituteofai.org";
@@ -88,6 +89,7 @@ export default async function LocaleLayout({
           <main className="flex-grow">{children}</main>
           <Footer />
           <CookieBanner />
+          <Analytics />
         </NextIntlClientProvider>
       </body>
     </html>
