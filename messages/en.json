@@ -292,5 +292,11 @@
     "value2Body": "Academic authority remains with accredited partner colleges, including approvals, transcripts, and degrees.",
     "value3Title": "Accessible Pathways",
     "value3Body": "The 2+2 pathway model supports structured, cost-efficient transfer outcomes for international students."
+  },
+  "Cookie": {
+    "message": "We use cookies to remember your language preference and improve your experience.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "learnMore": "Privacy Policy"
   }
 }

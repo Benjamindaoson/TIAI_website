@@ -1,0 +1,49 @@
+"use client";
+import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+
+const STORAGE_KEY = "tiai_cookie_consent";
+
+export default function CookieBanner() {
+  const t = useTranslations("Cookie");
+  const params = useParams();
+  const locale = typeof params.lang === "string" ? params.lang : "en";
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const consent = localStorage.getItem(STORAGE_KEY);
+    if (!consent) setVisible(true);
+  }, []);
+
+  const handleAccept = () => {
+    localStorage.setItem(STORAGE_KEY, "accepted");
+    setVisible(false);
+  };
+
+  const handleDecline = () => {
+    localStorage.setItem(STORAGE_KEY, "declined");
+    setVisible(false);
+  };
+
+  if (!visible) return null;
+
+  return (
+    <div className="fixed bottom-0 left-0 right-0 z-50 bg-slate-900 border-t border-slate-700 px-4 py-4">
+      <div className="container mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4 max-w-4xl">
+        <p className="text-slate-300 text-sm flex-1">
+          {t("message")}{" "}
+          <Link href={`/${locale}/privacy`} className="underline hover:text-white">
+            {t("learnMore")}
+          </Link>
+        </p>
+        <div className="flex gap-3 shrink-0">
+          <Button size="sm" variant="outline" onClick={handleDecline}>{t("decline")}</Button>
+          <Button size="sm" onClick={handleAccept}>{t("accept")}</Button>
+        </div>
+      </div>
+    </div>
+  );
+}
