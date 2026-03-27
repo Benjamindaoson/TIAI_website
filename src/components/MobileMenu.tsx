@@ -24,7 +24,7 @@ export default function MobileMenu({ locale }: MobileMenuProps) {
 
   return (
     <div className="md:hidden">
-      <Button variant="ghost" size="icon" aria-label="Open menu" onClick={() => setOpen(true)}>
+      <Button variant="ghost" size="icon" aria-label={t("openMenu")} onClick={() => setOpen(true)}>
         <Menu className="h-5 w-5" />
       </Button>
 
