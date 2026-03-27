@@ -15,8 +15,9 @@ export default async function BlogPage({
   const { page: pageParam } = await searchParams
   const t = await getTranslations('Blog')
   const allPosts = getAllPostMeta(lang)
-  const page = Math.max(1, parseInt(pageParam ?? '1', 10))
-  const totalPages = Math.ceil(allPosts.length / POSTS_PER_PAGE)
+  const totalPages = Math.max(1, Math.ceil(allPosts.length / POSTS_PER_PAGE))
+  const parsed = parseInt(pageParam ?? '1', 10)
+  const page = isNaN(parsed) ? 1 : Math.min(Math.max(1, parsed), totalPages)
   const posts = allPosts.slice((page - 1) * POSTS_PER_PAGE, page * POSTS_PER_PAGE)
 
   return (
