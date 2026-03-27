@@ -48,6 +48,27 @@ export async function POST(req: Request) {
     return new Response(JSON.stringify({ error: 'Failed to send notification email' }), { status: 500 })
   }
 
+  // Send confirmation email to submitter
+  const confirmationSubject = lang === 'zh'
+    ? '感谢您联系 TIAI — 我们已收到您的留言'
+    : 'Thank you for contacting TIAI — we received your message'
+
+  const confirmationText = lang === 'zh'
+    ? `您好 ${name}，\n\n感谢您联系德州人工智能学院（TIAI）。我们已收到您的留言，将在 2 个工作日内与您联系。\n\n---\n您的留言摘要：\n姓名：${name}\n意向方向：${program}\n\n${message}\n---\n\nTexas Institute of Artificial Intelligence\nhttps://texasinstituteofai.org`
+    : `Hi ${name},\n\nThank you for reaching out to the Texas Institute of Artificial Intelligence (TIAI). We have received your message and will be in touch within 2 business days.\n\n---\nYour submission summary:\nName: ${name}\nArea of interest: ${program}\n\n${message}\n---\n\nTexas Institute of Artificial Intelligence\nhttps://texasinstituteofai.org`
+
+  try {
+    await resend.emails.send({
+      from: 'TIAI <noreply@texasinstituteofai.org>',
+      to: email,
+      subject: confirmationSubject,
+      text: confirmationText,
+    })
+  } catch (err) {
+    // Non-fatal: log but do not fail the request
+    console.error('Resend confirmation error:', err)
+  }
+
   // Write to Airtable via REST API
   const airtableBaseId = process.env.AIRTABLE_BASE_ID
   const airtableApiKey = process.env.AIRTABLE_API_KEY
