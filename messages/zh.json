@@ -85,7 +85,9 @@
   },
   "Footer": {
     "address": "美国德克萨斯州",
-    "nonprofit": "TIAI 是一项非营利性教育倡议。"
+    "nonprofit": "TIAI 是一项非营利性教育倡议。",
+    "privacy": "隐私政策",
+    "terms": "服务条款"
   },
   "Blog": {
     "backToNews": "返回列表",

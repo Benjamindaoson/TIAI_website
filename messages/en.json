@@ -85,7 +85,9 @@
   },
   "Footer": {
     "address": "Texas, USA",
-    "nonprofit": "TIAI is a non-profit educational initiative."
+    "nonprofit": "TIAI is a non-profit educational initiative.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
   },
   "Blog": {
     "backToNews": "Back to News",
