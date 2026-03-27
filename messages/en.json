@@ -266,5 +266,28 @@
     "benefit4": "Network of AI practitioners and educators",
     "ctaTitle": "Apply to the Faculty Network",
     "ctaBody": "Submit your background and interest area. Our academic team will follow up within 5 business days."
+  },
+  "About": {
+    "heroTag": "About TIAI",
+    "heroTitle": "Institutional Mission and Standing",
+    "heroBody": "Texas Institute of Artificial Intelligence is a Texas nonprofit focused on rigorous, career-oriented AI and technology education delivered through accredited institutional partnerships.",
+    "missionTitle": "Mission",
+    "missionBody": "Expand access to high-quality AI education through accredited U.S. college partnerships, supporting international students toward technology careers via structured transfer pathways.",
+    "modelTitle": "Operating Model",
+    "modelBody": "TIAI operates as an instructional service partner. Academic authority — including curriculum approval, instructor credentialing, transcript issuance, and degree conferral — remains entirely with accredited partner institutions.",
+    "legalTitle": "Legal & Registry Information",
+    "reg1": "Legal Name: Texas Institute of Artificial Intelligence",
+    "reg2": "Entity Type: Domestic Nonprofit Corporation (Texas)",
+    "reg3": "TX SOS File Number: 806137746",
+    "reg4": "Federal EIN: 37-2190000",
+    "reg5": "Effective Date: August 11, 2025",
+    "reg6": "Principal Office: 5900 Balcones Drive, Suite 100, Austin, TX 78731",
+    "valuesTitle": "Our Values",
+    "value1Title": "Employment First",
+    "value1Body": "Every curriculum decision is aligned to practical outcomes in AI, CS, and Information Systems careers.",
+    "value2Title": "Institutional Integrity",
+    "value2Body": "Academic authority remains with accredited partner colleges, including approvals, transcripts, and degrees.",
+    "value3Title": "Accessible Pathways",
+    "value3Body": "The 2+2 pathway model supports structured, cost-efficient transfer outcomes for international students."
   }
 }

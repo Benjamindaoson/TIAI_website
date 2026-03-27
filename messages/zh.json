@@ -266,5 +266,28 @@
     "benefit4": "AI 从业者与教育者网络",
     "ctaTitle": "申请加入师资网络",
     "ctaBody": "提交您的背景与兴趣方向，我们的学术团队将在 5 个工作日内与您联系。"
+  },
+  "About": {
+    "heroTag": "关于 TIAI",
+    "heroTitle": "机构使命与法律定位",
+    "heroBody": "德州人工智能学院是在得克萨斯州注册的非营利机构，致力于通过认证高校合作提供严谨且以就业为导向的 AI 与技术教育。",
+    "missionTitle": "使命",
+    "missionBody": "通过与美国认证高校合作，扩大高质量 AI 教育的可及性，帮助国际学生通过结构化转学路径实现技术职业发展。",
+    "modelTitle": "运营模式",
+    "modelBody": "TIAI 作为教学服务伙伴运营。学术权威——包括课程审批、师资认定、成绩发放及学位授予——完整保留在认证合作院校。",
+    "legalTitle": "法律与注册信息",
+    "reg1": "法定名称：Texas Institute of Artificial Intelligence",
+    "reg2": "主体类型：得克萨斯州境内非营利公司",
+    "reg3": "TX SOS 档案编号：806137746",
+    "reg4": "联邦 EIN：37-2190000",
+    "reg5": "成立日期：2025 年 8 月 11 日",
+    "reg6": "主要办公地址：5900 Balcones Drive, Suite 100, Austin, TX 78731",
+    "valuesTitle": "核心价值观",
+    "value1Title": "就业导向",
+    "value1Body": "每一项课程设计都围绕真实岗位能力，服务 AI、计算机科学与信息系统职业路径。",
+    "value2Title": "院校治理完整性",
+    "value2Body": "学术审批、成绩与学位授予均由合作认证院校负责，TIAI 不转移学术权威。",
+    "value3Title": "可达成的升学路径",
+    "value3Body": "通过 2+2 路径模型，帮助国际学生以更清晰、可控的方式完成美国高校转学。"
   }
 }
