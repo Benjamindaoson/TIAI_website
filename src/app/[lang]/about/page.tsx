@@ -1,11 +1,11 @@
 import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://texasinstituteofai.org'
+import { getSiteUrl } from '@/lib/site'
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params
   const t = await getTranslations({ locale: lang, namespace: 'About' })
+  const siteUrl = getSiteUrl()
   return {
     title: `${t('heroTitle')} | TIAI`,
     description: t('heroBody'),

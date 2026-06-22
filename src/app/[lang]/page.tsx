@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ContactForm from "@/components/ContactForm";
+import { anchorHref } from "@/lib/routes";
 
 export default async function Home({
   params,
@@ -22,10 +23,10 @@ export default async function Home({
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">{t("heroBody")}</p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Button asChild className="bg-amber-400 text-slate-950 hover:bg-amber-300">
-              <Link href={`/${lang}#partnership`}>{t("ctaPrimary")}</Link>
+              <Link href={anchorHref(lang, "partnership")}>{t("ctaPrimary")}</Link>
             </Button>
             <Button asChild variant="outline" className="border-amber-400 text-amber-300 hover:bg-amber-400/10">
-              <Link href={`/${lang}#faculty`}>{t("ctaSecondary")}</Link>
+              <Link href={anchorHref(lang, "faculty")}>{t("ctaSecondary")}</Link>
             </Button>
           </div>
         </div>

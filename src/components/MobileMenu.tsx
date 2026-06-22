@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
+import { anchorHref, localizedHref } from "@/lib/routes";
 
 interface MobileMenuProps {
   locale: string;
@@ -14,12 +15,12 @@ export default function MobileMenu({ locale }: MobileMenuProps) {
   const [open, setOpen] = useState(false);
 
   const links = [
-    { href: `/${locale}/programs/ai-ml`, label: t("programsNav") },
-    { href: `/${locale}/blog`, label: t("blog") },
-    { href: `/${locale}/about`, label: t("about") },
-    { href: `/${locale}/faculty`, label: t("faculty") },
-    { href: `/${locale}#partnership`, label: t("partnership") },
-    { href: `/${locale}#contact`, label: t("contact") },
+    { href: localizedHref(locale, "/programs/ai-ml"), label: t("programsNav") },
+    { href: localizedHref(locale, "/blog"), label: t("blog") },
+    { href: localizedHref(locale, "/about"), label: t("about") },
+    { href: localizedHref(locale, "/faculty"), label: t("faculty") },
+    { href: anchorHref(locale, "partnership"), label: t("partnership") },
+    { href: anchorHref(locale, "contact"), label: t("contact") },
   ];
 
   return (

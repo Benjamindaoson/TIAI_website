@@ -2,8 +2,8 @@ import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://texasinstituteofai.org'
+import { getSiteUrl } from '@/lib/site'
+import { anchorHref } from '@/lib/routes'
 
 export async function generateMetadata({
   params,
@@ -12,6 +12,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params
   const t = await getTranslations({ locale: lang, namespace: 'Faculty' })
+  const siteUrl = getSiteUrl()
   return {
     title: `${t('heroTitle')} | TIAI`,
     description: t('heroBody'),
@@ -62,7 +63,7 @@ export default async function FacultyPage({ params }: { params: Promise<{ lang: 
           <div className="bg-slate-900 rounded-lg p-8">
             <h2 className="text-2xl font-bold text-slate-100 mb-3">{t('ctaTitle')}</h2>
             <p className="text-slate-400 mb-6">{t('ctaBody')}</p>
-            <Link href={`/${lang}#contact`}>
+            <Link href={anchorHref(lang, 'contact')}>
               <Button size="lg">{lang === 'zh' ? '\u7acb\u5373\u7533\u8bf7' : 'Apply Now'}</Button>
             </Link>
           </div>

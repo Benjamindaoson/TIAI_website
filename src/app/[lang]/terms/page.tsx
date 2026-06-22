@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://texasinstituteofai.org'
+import { getSiteUrl } from '@/lib/site'
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params
   const isZh = lang === 'zh'
+  const siteUrl = getSiteUrl()
   return {
     title: isZh ? '服务条款 | TIAI' : 'Terms of Service | TIAI',
     robots: { index: false, follow: false },

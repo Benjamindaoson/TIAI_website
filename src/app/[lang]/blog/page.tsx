@@ -1,6 +1,7 @@
 import { getAllPostMeta } from '@/lib/mdx'
 import { getTranslations } from 'next-intl/server'
 import Link from 'next/link'
+import { localizedHref } from '@/lib/routes'
 
 const POSTS_PER_PAGE = 8
 
@@ -32,7 +33,7 @@ export default async function BlogPage({
             <article key={post.slug} className="border border-slate-800 rounded-lg p-6 hover:border-slate-600 transition-colors">
               <time className="text-sm text-slate-500">{post.date}</time>
               <h2 className="text-xl font-semibold text-slate-100 mt-1 mb-2">
-                <Link href={`/${lang}/blog/${post.slug}`} className="hover:text-blue-400 transition-colors">
+                <Link href={localizedHref(lang, `/blog/${post.slug}`)} className="hover:text-blue-400 transition-colors">
                   {post.title}
                 </Link>
               </h2>
@@ -49,13 +50,13 @@ export default async function BlogPage({
       {totalPages > 1 && (
         <div className="flex items-center justify-center gap-4 mt-12">
           {page > 1 && (
-            <Link href={`/${lang}/blog?page=${page - 1}`} className="text-slate-400 hover:text-slate-200">
+            <Link href={localizedHref(lang, `/blog?page=${page - 1}`)} className="text-slate-400 hover:text-slate-200">
               {t('prevPage')}
             </Link>
           )}
           <span className="text-slate-500 text-sm">{t('page')} {page} / {totalPages}</span>
           {page < totalPages && (
-            <Link href={`/${lang}/blog?page=${page + 1}`} className="text-slate-400 hover:text-slate-200">
+            <Link href={localizedHref(lang, `/blog?page=${page + 1}`)} className="text-slate-400 hover:text-slate-200">
               {t('nextPage')}
             </Link>
           )}

@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { localizedHref } from "@/lib/routes";
 
 const STORAGE_KEY = "tiai_cookie_consent";
 const CONSENT_EVENT = "tiai_cookie_consent_change";
@@ -50,7 +51,7 @@ export default function CookieBanner() {
       <div className="container mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4 max-w-4xl">
         <p className="text-slate-300 text-sm flex-1">
           {t("message")}{" "}
-          <Link href={`/${locale}/privacy`} className="underline hover:text-white">
+          <Link href={localizedHref(locale, "/privacy")} className="underline hover:text-white">
             {t("learnMore")}
           </Link>
         </p>

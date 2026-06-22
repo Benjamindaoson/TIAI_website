@@ -4,8 +4,8 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import { getTranslations } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://texasinstituteofai.org'
+import { getSiteUrl } from '@/lib/site'
+import { localizedHref } from '@/lib/routes'
 
 export async function generateMetadata({
   params,
@@ -16,6 +16,7 @@ export async function generateMetadata({
   let post = getPost(slug, lang)
   if (!post && lang === 'zh') post = getPost(slug, 'en')
   if (!post) return {}
+  const siteUrl = getSiteUrl()
   return {
     title: `${post.title} | TIAI`,
     description: post.excerpt,
@@ -65,7 +66,7 @@ export default async function BlogPostPage({
           {t('fallbackBanner')}
         </div>
       )}
-      <Link href={`/${lang}/blog`} className="text-sm text-slate-400 hover:text-slate-200 mb-8 inline-block">
+      <Link href={localizedHref(lang, '/blog')} className="text-sm text-slate-400 hover:text-slate-200 mb-8 inline-block">
         ← {t('backToNews')}
       </Link>
       <time dateTime={post!.date} className="text-sm text-slate-500">{post!.date}</time>

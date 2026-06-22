@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import matter from 'gray-matter'
+import { parseFrontmatter, type FrontmatterData } from './frontmatter'
 
 const postsDir = path.join(process.cwd(), 'content/posts')
 
@@ -37,15 +37,15 @@ export function getAllPostMeta(lang: string): PostMeta[] {
       const parsed = parseFilename(filename)
       if (!parsed || parsed.lang !== lang) return null
       const raw = fs.readFileSync(path.join(postsDir, filename), 'utf-8')
-      const { data } = matter(raw)
+      const { data } = parseFrontmatter(raw)
       return {
         slug: parsed.slug,
         lang: parsed.lang,
-        title: data.title ?? '',
-        date: data.date ?? '',
-        author: data.author ?? '',
-        tags: Array.isArray(data.tags) ? data.tags : [],
-        excerpt: data.excerpt ?? '',
+        title: getString(data, 'title'),
+        date: getString(data, 'date'),
+        author: getString(data, 'author'),
+        tags: getStringArray(data, 'tags'),
+        excerpt: getString(data, 'excerpt'),
       } satisfies PostMeta
     })
     .filter((p): p is PostMeta => p !== null)
@@ -59,16 +59,16 @@ export function getPost(slug: string, lang: string): Post | null {
   })
   if (!filename) return null
   const raw = fs.readFileSync(path.join(postsDir, filename), 'utf-8')
-  const { data, content } = matter(raw)
+  const { data, content } = parseFrontmatter(raw)
   return {
     slug,
     lang,
     content,
-    title: data.title ?? '',
-    date: data.date ?? '',
-    author: data.author ?? '',
-    tags: Array.isArray(data.tags) ? data.tags : [],
-    excerpt: data.excerpt ?? '',
+    title: getString(data, 'title'),
+    date: getString(data, 'date'),
+    author: getString(data, 'author'),
+    tags: getStringArray(data, 'tags'),
+    excerpt: getString(data, 'excerpt'),
   }
 }
 
@@ -76,4 +76,14 @@ export function getAllSlugs(): { slug: string; lang: string }[] {
   return readPostsDir()
     .map(parseFilename)
     .filter((p): p is { slug: string; lang: string } => p !== null)
+}
+
+function getString(data: FrontmatterData, key: string) {
+  const value = data[key]
+  return typeof value === 'string' ? value : ''
+}
+
+function getStringArray(data: FrontmatterData, key: string) {
+  const value = data[key]
+  return Array.isArray(value) ? value : []
 }

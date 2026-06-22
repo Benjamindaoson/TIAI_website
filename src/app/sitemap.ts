@@ -1,9 +1,9 @@
 import type { MetadataRoute } from "next";
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://texasinstituteofai.org";
+import { getSiteUrl, locales, programSlugs, staticPageSlugs } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
+  const siteUrl = getSiteUrl();
 
   return [
     {
@@ -31,8 +31,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     },
     // Course pages
-    ...(['ai-ml', 'cs', 'information-systems'] as const).flatMap((slug) =>
-      (['en', 'zh'] as const).map((lang) => ({
+    ...programSlugs.flatMap((slug) =>
+      locales.map((lang) => ({
         url: `${siteUrl}/${lang}/programs/${slug}`,
         lastModified: now,
         changeFrequency: 'monthly' as const,
@@ -40,15 +40,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }))
     ),
     // Blog list pages
-    ...(['en', 'zh'] as const).map((lang) => ({
+    ...locales.map((lang) => ({
       url: `${siteUrl}/${lang}/blog`,
       lastModified: now,
       changeFrequency: 'weekly' as const,
       priority: 0.7,
     })),
     // Static content pages
-    ...(['faculty', 'about', 'privacy', 'terms'] as const).flatMap((slug) =>
-      (['en', 'zh'] as const).map((lang) => ({
+    ...staticPageSlugs.flatMap((slug) =>
+      locales.map((lang) => ({
         url: `${siteUrl}/${lang}/${slug}`,
         lastModified: now,
         changeFrequency: 'monthly' as const,

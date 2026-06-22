@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import { anchorHref } from '@/lib/routes'
 
 interface ProgramPageProps {
   lang: string
@@ -17,7 +18,7 @@ export default function ProgramPage({ lang, hero, overview, courses, outcomes, r
       <section className="container mx-auto px-4 py-24 max-w-4xl">
         <h1 className="text-5xl font-bold text-slate-100 mb-4">{hero.title}</h1>
         <p className="text-xl text-slate-400 mb-8">{hero.tagline}</p>
-        <Link href={`/${lang}#contact`}>
+        <Link href={anchorHref(lang, 'contact')}>
           <Button size="lg">{hero.cta}</Button>
         </Link>
       </section>
@@ -85,7 +86,7 @@ export default function ProgramPage({ lang, hero, overview, courses, outcomes, r
               </li>
             ))}
           </ul>
-          <Link href={`/${lang}#contact`}>
+          <Link href={anchorHref(lang, 'contact')}>
             <Button size="lg">{hero.cta}</Button>
           </Link>
         </div>

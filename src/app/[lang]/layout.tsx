@@ -8,9 +8,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
 import Analytics from "@/components/Analytics";
-
-const locales = ["en", "zh"] as const;
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://texasinstituteofai.org";
+import { getSiteUrl, isLocale } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,7 +26,8 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
-  const locale = locales.includes(lang as (typeof locales)[number]) ? lang : "en";
+  const locale = isLocale(lang) ? lang : "en";
+  const siteUrl = getSiteUrl();
 
   const title =
     locale === "zh"
@@ -75,7 +74,7 @@ export default async function LocaleLayout({
   const { lang } = await params;
   const locale = lang;
 
-  if (!locales.includes(locale as (typeof locales)[number])) {
+  if (!isLocale(locale)) {
     notFound();
   }
 
