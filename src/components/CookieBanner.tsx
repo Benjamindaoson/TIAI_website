@@ -1,31 +1,46 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 const STORAGE_KEY = "tiai_cookie_consent";
+const CONSENT_EVENT = "tiai_cookie_consent_change";
+
+function subscribe(callback: () => void) {
+  window.addEventListener("storage", callback);
+  window.addEventListener(CONSENT_EVENT, callback);
+
+  return () => {
+    window.removeEventListener("storage", callback);
+    window.removeEventListener(CONSENT_EVENT, callback);
+  };
+}
+
+function getSnapshot() {
+  return localStorage.getItem(STORAGE_KEY) ?? "";
+}
+
+function getServerSnapshot() {
+  return "accepted";
+}
 
 export default function CookieBanner() {
   const t = useTranslations("Cookie");
   const params = useParams();
   const locale = typeof params.lang === "string" ? params.lang : "en";
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const consent = localStorage.getItem(STORAGE_KEY);
-    if (!consent) setVisible(true);
-  }, []);
+  const consent = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+  const visible = !consent;
 
   const handleAccept = () => {
     localStorage.setItem(STORAGE_KEY, "accepted");
-    setVisible(false);
+    window.dispatchEvent(new Event(CONSENT_EVENT));
   };
 
   const handleDecline = () => {
     localStorage.setItem(STORAGE_KEY, "declined");
-    setVisible(false);
+    window.dispatchEvent(new Event(CONSENT_EVENT));
   };
 
   if (!visible) return null;

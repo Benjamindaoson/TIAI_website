@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ContactForm from "@/components/ContactForm";
@@ -9,7 +9,7 @@ export default async function Home({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
-  const t = useTranslations("Landing");
+  const t = await getTranslations({ locale: lang, namespace: "Landing" });
 
   return (
     <div className="bg-slate-950 text-slate-100">
@@ -22,10 +22,10 @@ export default async function Home({
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">{t("heroBody")}</p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Button asChild className="bg-amber-400 text-slate-950 hover:bg-amber-300">
-              <Link href="#partnership">{t("ctaPrimary")}</Link>
+              <Link href={`/${lang}#partnership`}>{t("ctaPrimary")}</Link>
             </Button>
             <Button asChild variant="outline" className="border-amber-400 text-amber-300 hover:bg-amber-400/10">
-              <Link href="#faculty">{t("ctaSecondary")}</Link>
+              <Link href={`/${lang}#faculty`}>{t("ctaSecondary")}</Link>
             </Button>
           </div>
         </div>

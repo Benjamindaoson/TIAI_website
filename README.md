@@ -25,6 +25,18 @@ This value is used by:
 - `robots.txt`
 - `sitemap.xml`
 
+## Production Environment Variables
+
+- `NEXT_PUBLIC_SITE_URL`
+- `ADMIN_EMAIL`
+- `RESEND_API_KEY`
+- `AIRTABLE_BASE_ID` optional
+- `AIRTABLE_API_KEY` optional
+- `AIRTABLE_TABLE_NAME` optional, defaults to `Contacts`
+- `NEXT_PUBLIC_CF_ANALYTICS_TOKEN` optional
+- `NEXT_PUBLIC_TURNSTILE_SITE_KEY`
+- `TURNSTILE_SECRET_KEY`
+
 ## Recommended Free Deployment (Cloudflare Pages)
 
 1. Push this repo to GitHub.

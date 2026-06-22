@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import Script from 'next/script'
 import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
 
@@ -9,18 +10,25 @@ export default function ContactForm({ lang }: { lang: string }) {
   const t = useTranslations('Contact')
   const [state, setState] = useState<FormState>('idle')
   const [error, setError] = useState('')
+  const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setState('loading')
+    setError('')
     const data = Object.fromEntries(new FormData(e.currentTarget))
+    const turnstileInput = e.currentTarget.querySelector<HTMLInputElement>('input[name="cf-turnstile-response"]')
+    const turnstileToken = turnstileInput?.value
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, lang }),
+        body: JSON.stringify({ ...data, lang, turnstileToken }),
       })
-      if (!res.ok) throw new Error(await res.text())
+      if (!res.ok) {
+        const result = (await res.json().catch(() => null)) as { error?: string } | null
+        throw new Error(result?.error || 'Unable to send message')
+      }
       setState('success')
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Unknown error')
@@ -33,43 +41,59 @@ export default function ContactForm({ lang }: { lang: string }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <div className="grid md:grid-cols-2 gap-4">
-        <div>
-          <label className="block text-sm text-slate-400 mb-1">{t('name')} *</label>
-          <input name="name" required className="w-full px-3 py-2 rounded bg-slate-800 border border-slate-700 text-slate-100 focus:outline-none focus:border-blue-500" />
+    <>
+      {turnstileSiteKey && (
+        <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" strategy="afterInteractive" />
+      )}
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <input
+          type="text"
+          name="company"
+          tabIndex={-1}
+          autoComplete="off"
+          className="hidden"
+          aria-hidden="true"
+        />
+        <div className="grid md:grid-cols-2 gap-4">
+          <div>
+            <label className="block text-sm text-slate-400 mb-1">{t('name')} *</label>
+            <input name="name" required className="w-full px-3 py-2 rounded bg-slate-800 border border-slate-700 text-slate-100 focus:outline-none focus:border-blue-500" />
+          </div>
+          <div>
+            <label className="block text-sm text-slate-400 mb-1">{t('email')} *</label>
+            <input name="email" type="email" required className="w-full px-3 py-2 rounded bg-slate-800 border border-slate-700 text-slate-100 focus:outline-none focus:border-blue-500" />
+          </div>
+        </div>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div>
+            <label className="block text-sm text-slate-400 mb-1">{t('phone')}</label>
+            <input name="phone" type="tel" className="w-full px-3 py-2 rounded bg-slate-800 border border-slate-700 text-slate-100 focus:outline-none focus:border-blue-500" />
+          </div>
+          <div>
+            <label className="block text-sm text-slate-400 mb-1">{t('program')} *</label>
+            <select name="program" required className="w-full px-3 py-2 rounded bg-slate-800 border border-slate-700 text-slate-100 focus:outline-none focus:border-blue-500">
+              <option value="">{t('programPlaceholder')}</option>
+              <option value="ai-ml">{t('programAiMl')}</option>
+              <option value="cs">{t('programCs')}</option>
+              <option value="information-systems">{t('programIs')}</option>
+              <option value="partnership">{t('programPartnership')}</option>
+              <option value="faculty">{t('programFaculty')}</option>
+              <option value="other">{t('programOther')}</option>
+            </select>
+          </div>
         </div>
         <div>
-          <label className="block text-sm text-slate-400 mb-1">{t('email')} *</label>
-          <input name="email" type="email" required className="w-full px-3 py-2 rounded bg-slate-800 border border-slate-700 text-slate-100 focus:outline-none focus:border-blue-500" />
+          <label className="block text-sm text-slate-400 mb-1">{t('message')} *</label>
+          <textarea name="message" required rows={4} className="w-full px-3 py-2 rounded bg-slate-800 border border-slate-700 text-slate-100 focus:outline-none focus:border-blue-500" />
         </div>
-      </div>
-      <div className="grid md:grid-cols-2 gap-4">
-        <div>
-          <label className="block text-sm text-slate-400 mb-1">{t('phone')}</label>
-          <input name="phone" type="tel" className="w-full px-3 py-2 rounded bg-slate-800 border border-slate-700 text-slate-100 focus:outline-none focus:border-blue-500" />
-        </div>
-        <div>
-          <label className="block text-sm text-slate-400 mb-1">{t('program')} *</label>
-          <select name="program" required className="w-full px-3 py-2 rounded bg-slate-800 border border-slate-700 text-slate-100 focus:outline-none focus:border-blue-500">
-            <option value="">{t('programPlaceholder')}</option>
-            <option value="ai-ml">{t('programAiMl')}</option>
-            <option value="cs">{t('programCs')}</option>
-            <option value="information-systems">{t('programIs')}</option>
-            <option value="partnership">{t('programPartnership')}</option>
-            <option value="faculty">{t('programFaculty')}</option>
-            <option value="other">{t('programOther')}</option>
-          </select>
-        </div>
-      </div>
-      <div>
-        <label className="block text-sm text-slate-400 mb-1">{t('message')} *</label>
-        <textarea name="message" required rows={4} className="w-full px-3 py-2 rounded bg-slate-800 border border-slate-700 text-slate-100 focus:outline-none focus:border-blue-500" />
-      </div>
-      {state === 'error' && <p className="text-red-400 text-sm">{error}</p>}
-      <Button type="submit" disabled={state === 'loading'}>
-        {state === 'loading' ? t('sending') : t('submit')}
-      </Button>
-    </form>
+        {turnstileSiteKey && (
+          <div className="cf-turnstile" data-sitekey={turnstileSiteKey} />
+        )}
+        {state === 'error' && <p className="text-red-400 text-sm">{error}</p>}
+        <Button type="submit" disabled={state === 'loading'}>
+          {state === 'loading' ? t('sending') : t('submit')}
+        </Button>
+      </form>
+    </>
   )
 }

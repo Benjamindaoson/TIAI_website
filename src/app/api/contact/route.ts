@@ -1,5 +1,7 @@
 import { z } from 'zod'
 import { Resend } from 'resend'
+import { checkRateLimit } from '@/lib/rate-limit'
+import { verifyTurnstileToken } from '@/lib/turnstile'
 
 export const runtime = 'edge'
 
@@ -10,6 +12,8 @@ const schema = z.object({
   program: z.enum(['ai-ml', 'cs', 'information-systems', 'partnership', 'faculty', 'other']),
   message: z.string().min(1).max(2000),
   lang: z.enum(['en', 'zh']),
+  turnstileToken: z.string().optional(),
+  company: z.string().optional(),
 })
 
 export async function POST(req: Request) {
@@ -17,20 +21,39 @@ export async function POST(req: Request) {
   try {
     body = await req.json()
   } catch {
-    return new Response(JSON.stringify({ error: 'Invalid JSON' }), { status: 400 })
+    return Response.json({ error: 'Invalid JSON' }, { status: 400 })
   }
 
   const parsed = schema.safeParse(body)
   if (!parsed.success) {
-    return new Response(JSON.stringify({ error: parsed.error.flatten() }), { status: 400 })
+    return Response.json({ error: parsed.error.flatten() }, { status: 400 })
   }
 
   const { name, email, phone, program, message, lang } = parsed.data
+  const ip =
+    req.headers.get('cf-connecting-ip') ||
+    req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
+    'unknown'
+
+  const rateLimit = checkRateLimit(`contact:${ip}`, 5, 10 * 60 * 1000)
+  if (!rateLimit.allowed) {
+    return Response.json({ error: 'Too many requests' }, { status: 429 })
+  }
+
+  if (parsed.data.company) {
+    return Response.json({ success: true }, { status: 200 })
+  }
+
+  const turnstile = await verifyTurnstileToken(parsed.data.turnstileToken ?? '', ip)
+  if (!turnstile.success) {
+    return Response.json({ error: 'Bot verification failed' }, { status: 400 })
+  }
+
   const adminEmail = process.env.ADMIN_EMAIL
   const resendApiKey = process.env.RESEND_API_KEY
 
   if (!adminEmail || !resendApiKey) {
-    return new Response(JSON.stringify({ error: 'Server configuration error' }), { status: 500 })
+    return Response.json({ error: 'Server configuration error' }, { status: 500 })
   }
 
   const resend = new Resend(resendApiKey)
@@ -45,7 +68,7 @@ export async function POST(req: Request) {
     })
   } catch (err) {
     console.error('Resend error:', err)
-    return new Response(JSON.stringify({ error: 'Failed to send notification email' }), { status: 500 })
+    return Response.json({ error: 'Failed to send notification email' }, { status: 500 })
   }
 
   // Send confirmation email to submitter
@@ -106,5 +129,5 @@ export async function POST(req: Request) {
     }
   }
 
-  return new Response(JSON.stringify({ success: true }), { status: 200 })
+  return Response.json({ success: true }, { status: 200 })
 }
