@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ContactForm from "@/components/ContactForm";
-import { anchorHref } from "@/lib/routes";
+import { localizedHref } from "@/lib/routes";
 
 export default async function Home({
   params,
@@ -23,10 +23,10 @@ export default async function Home({
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">{t("heroBody")}</p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Button asChild className="bg-amber-400 text-slate-950 hover:bg-amber-300">
-              <Link href={anchorHref(lang, "partnership")}>{t("ctaPrimary")}</Link>
+              <Link href={localizedHref(lang, "/university-partnerships")}>{t("ctaPrimary")}</Link>
             </Button>
             <Button asChild variant="outline" className="border-amber-400 text-amber-300 hover:bg-amber-400/10">
-              <Link href={anchorHref(lang, "faculty")}>{t("ctaSecondary")}</Link>
+              <Link href={localizedHref(lang, "/for-students")}>{t("ctaSecondary")}</Link>
             </Button>
           </div>
         </div>
@@ -59,18 +59,18 @@ export default async function Home({
           <p className="text-xs uppercase tracking-[0.2em] text-amber-400">{t("programsTag")}</p>
           <h2 className="mt-3 text-3xl font-light text-white md:text-4xl">{t("programsTitle")}</h2>
           <div className="mt-10 grid gap-4 md:grid-cols-3">
-            <article className="border border-amber-500/20 bg-slate-900 p-6">
+            <Link href={localizedHref(lang, "/programs/ai-ml")} className="border border-amber-500/20 bg-slate-900 p-6 transition-colors hover:border-amber-400/60">
               <h3 className="text-xl text-white">{t("program1Title")}</h3>
               <p className="mt-3 leading-7 text-slate-300">{t("program1Body")}</p>
-            </article>
-            <article className="border border-amber-500/20 bg-slate-900 p-6">
+            </Link>
+            <Link href={localizedHref(lang, "/programs/cs")} className="border border-amber-500/20 bg-slate-900 p-6 transition-colors hover:border-amber-400/60">
               <h3 className="text-xl text-white">{t("program2Title")}</h3>
               <p className="mt-3 leading-7 text-slate-300">{t("program2Body")}</p>
-            </article>
-            <article className="border border-amber-500/20 bg-slate-900 p-6">
+            </Link>
+            <Link href={localizedHref(lang, "/programs/information-systems")} className="border border-amber-500/20 bg-slate-900 p-6 transition-colors hover:border-amber-400/60">
               <h3 className="text-xl text-white">{t("program3Title")}</h3>
               <p className="mt-3 leading-7 text-slate-300">{t("program3Body")}</p>
-            </article>
+            </Link>
           </div>
         </div>
       </section>
@@ -179,13 +179,13 @@ export default async function Home({
               <p className="mt-3 leading-7 text-slate-300">{t("contactAddressBody")}</p>
             </article>
             <div className="space-y-3 text-sm text-amber-300">
-              <a href="mailto:partnerships@tiai.edu" className="block border border-amber-500/30 px-4 py-3 hover:bg-amber-500/10">
+              <a href="mailto:partnerships@texasinstituteofai.org" className="block border border-amber-500/30 px-4 py-3 hover:bg-amber-500/10">
                 {t("contactMail1")}
               </a>
-              <a href="mailto:faculty@tiai.edu" className="block border border-amber-500/30 px-4 py-3 hover:bg-amber-500/10">
+              <a href="mailto:faculty@texasinstituteofai.org" className="block border border-amber-500/30 px-4 py-3 hover:bg-amber-500/10">
                 {t("contactMail2")}
               </a>
-              <a href="mailto:admissions@tiai.edu" className="block border border-amber-500/30 px-4 py-3 hover:bg-amber-500/10">
+              <a href="mailto:admissions@texasinstituteofai.org" className="block border border-amber-500/30 px-4 py-3 hover:bg-amber-500/10">
                 {t("contactMail3")}
               </a>
             </div>

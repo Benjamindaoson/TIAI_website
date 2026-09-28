@@ -9,14 +9,17 @@
     "insights": "洞察",
     "contact": "联系",
     "closeMenu": "关闭菜单",
-    "openMenu": "打开菜单"
+    "openMenu": "打开菜单",
+    "mobileMenu": "网站导航",
+    "universities": "大学合作",
+    "students": "学生路径"
   },
   "Landing": {
     "heroTag": "非营利教育 | 美国得州奥斯汀",
     "heroTitle": "培养下一代 AI 实战型人才",
-    "heroBody": "德州人工智能学院与美国认证高校合作，提供面向就业的 AI、计算机科学与信息系统教育，服务国际人才发展路径。",
-    "ctaPrimary": "机构合作咨询",
-    "ctaSecondary": "加入师资网络",
+    "heroBody": "Texas Institute of Artificial Intelligence 是一家得州非营利机构，正在与认证院校和学术伙伴共同建设 AI、计算机科学和转学衔接教育路径。",
+    "ctaPrimary": "大学合作",
+    "ctaSecondary": "学生路径",
     "aboutTag": "关于",
     "aboutTitle": "机构使命与法律定位",
     "aboutBody": "TIAI 是注册于得州的非营利机构，聚焦严谨且以就业为导向的 AI 教育，并通过认证高校合作落地。",
@@ -36,16 +39,16 @@
     "program3Body": "面向业务与技术融合岗位：数据库、BI、数据流程与企业系统。",
     "partnershipTag": "合作",
     "partnershipTitle": "社区学院 AI 项目的可执行合作模式",
-    "partnershipBody": "TIAI 作为教学服务伙伴，合作院校保留全部学术权威，TIAI 提供课程交付能力与 AI 师资网络支持。",
+    "partnershipBody": "TIAI 定位为教学与项目开发合作伙伴。录取决定、学分、成绩单、学籍和学位授予等学术权责仍由具备授权资质的院校负责。",
     "partnershipHowTitle": "合作流程",
     "partnershipStep1": "初步咨询，明确战略目标、招生预期与项目实施范围。",
     "partnershipStep2": "在院校治理框架内完成课程与师资资格对齐。",
     "partnershipStep3": "项目落地并配套学生支持与转学结果跟踪。",
     "partnershipCardTitle": "院校可获得",
-    "partnershipPoint1": "可审计的运营模式与招生增长支持",
-    "partnershipPoint2": "AI/CS 师资网络与课程能力支持",
-    "partnershipPoint3": "以转学结果为导向的学生服务体系",
-    "partnershipPoint4": "简洁的服务费模式，避免复杂收入分成结构",
+    "partnershipPoint1": "围绕 AI、计算机、数学和英语桥接需求提供项目设计与实施支持",
+    "partnershipPoint2": "课程开发、师资网络和学生支持能力",
+    "partnershipPoint3": "清晰区分 TIAI 服务职责与院校学术权责",
+    "partnershipPoint4": "适合长期院校合作关系的质量保障实践",
     "partnershipGovernanceTitle": "学术治理保障",
     "partnershipGovernanceBody": "课程提交院校审批，教师按标准完成资质认定，学生记录完整保留在院校系统内。",
     "facultyTag": "师资",
@@ -79,15 +82,25 @@
     "contactBody": "无论是机构合作、师资加入或招生咨询，欢迎直接联系团队，我们会提供下一步方案。",
     "contactAddressTitle": "邮寄地址",
     "contactAddressBody": "Texas Institute of Artificial Intelligence\n5900 Balcones Drive, Suite 100\nAustin, TX 78731\nUnited States",
-    "contactMail1": "机构合作 | partnerships@tiai.edu",
-    "contactMail2": "师资与顾问 | faculty@tiai.edu",
-    "contactMail3": "招生咨询 | admissions@tiai.edu"
+    "contactMail1": "机构合作 | partnerships@texasinstituteofai.org",
+    "contactMail2": "教师与顾问 | faculty@texasinstituteofai.org",
+    "contactMail3": "学生咨询 | admissions@texasinstituteofai.org"
   },
   "Footer": {
     "address": "美国德克萨斯州",
-    "nonprofit": "TIAI 是一项非营利性教育倡议。",
+    "nonprofit": "TIAI 是注册于得州的非营利 AI 教育机构建设项目。",
     "privacy": "隐私政策",
-    "terms": "服务条款"
+    "terms": "服务条款",
+    "accessibility": "无障碍声明",
+    "nonDiscrimination": "非歧视声明",
+    "refund": "退款与取消",
+    "disclosures": "机构披露",
+    "about": "关于",
+    "universities": "大学合作",
+    "students": "学生路径",
+    "admissions": "招生与申请",
+    "tuition": "费用信息",
+    "faq": "常见问题"
   },
   "Blog": {
     "backToNews": "返回列表",
@@ -143,6 +156,27 @@
           "英语水平（托福 80+ 或雅思 6.5+）",
           "基本编程经验（优先 Python）"
         ]
+      },
+      "details": {
+        "formatTitle": "学习形式与周期",
+        "formatItems": [
+          "教师指导学习，结合项目实践和独立练习。",
+          "准备计划可根据学生背景和院校要求调整。",
+          "课程可通过线上、混合或经批准的合作场景交付。"
+        ],
+        "assessmentTitle": "考核方式",
+        "assessmentItems": [
+          "根据课程需要完成编程或应用作业。",
+          "完成项目作品、学习反思或阶段性展示。",
+          "根据路径目标进行进度检查，而非承诺固定结果。"
+        ],
+        "applicationTitle": "申请步骤",
+        "applicationItems": [
+          "提交学术背景和意向路径。",
+          "完成咨询沟通和准备度评估。",
+          "获得建议学习计划和下一步安排。"
+        ],
+        "disclaimer": "本项目说明用于学习准备和咨询。录取、学分、转学、成绩单和学位决定，仅由具备相应权威的院校按照自身政策作出。"
       }
     },
     "cs": {
@@ -174,7 +208,7 @@
       "outcomes": {
         "title": "学习成果",
         "items": [
-          "转入美国认证 CS 本科项目",
+          "为符合院校具体要求的 CS 转学或后续学习做准备",
           "达到行业标准的算法解题能力",
           "设计并构建全栈软件系统",
           "应用软件工程最佳实践"
@@ -187,6 +221,27 @@
           "英语水平（托福 70+ 或雅思 6.0+）",
           "数学基础（预科微积分或以上）"
         ]
+      },
+      "details": {
+        "formatTitle": "学习形式与周期",
+        "formatItems": [
+          "教师指导学习，结合项目实践和独立练习。",
+          "准备计划可根据学生背景和院校要求调整。",
+          "课程可通过线上、混合或经批准的合作场景交付。"
+        ],
+        "assessmentTitle": "考核方式",
+        "assessmentItems": [
+          "根据课程需要完成编程或应用作业。",
+          "完成项目作品、学习反思或阶段性展示。",
+          "根据路径目标进行进度检查，而非承诺固定结果。"
+        ],
+        "applicationTitle": "申请步骤",
+        "applicationItems": [
+          "提交学术背景和意向路径。",
+          "完成咨询沟通和准备度评估。",
+          "获得建议学习计划和下一步安排。"
+        ],
+        "disclaimer": "本项目说明用于学习准备和咨询。录取、学分、转学、成绩单和学位决定，仅由具备相应权威的院校按照自身政策作出。"
       }
     },
     "information-systems": {
@@ -231,6 +286,27 @@
           "英语水平（托福 75+ 或雅思 6.0+）",
           "基本商业运营知识"
         ]
+      },
+      "details": {
+        "formatTitle": "学习形式与周期",
+        "formatItems": [
+          "教师指导学习，结合项目实践和独立练习。",
+          "准备计划可根据学生背景和院校要求调整。",
+          "课程可通过线上、混合或经批准的合作场景交付。"
+        ],
+        "assessmentTitle": "考核方式",
+        "assessmentItems": [
+          "根据课程需要完成编程或应用作业。",
+          "完成项目作品、学习反思或阶段性展示。",
+          "根据路径目标进行进度检查，而非承诺固定结果。"
+        ],
+        "applicationTitle": "申请步骤",
+        "applicationItems": [
+          "提交学术背景和意向路径。",
+          "完成咨询沟通和准备度评估。",
+          "获得建议学习计划和下一步安排。"
+        ],
+        "disclaimer": "本项目说明用于学习准备和咨询。录取、学分、转学、成绩单和学位决定，仅由具备相应权威的院校按照自身政策作出。"
       }
     }
   },
@@ -249,7 +325,18 @@
     "message": "留言",
     "submit": "发送消息",
     "sending": "发送中...",
-    "successMessage": "感谢您的留言！我们将在 2 个工作日内与您联系。"
+    "successMessage": "感谢您的留言！我们将在 2 个工作日内与您联系。",
+    "errorMessage": "消息暂时未能发送。请发送邮件至 partnerships@texasinstituteofai.org，或稍后再试。",
+    "privacyConsent": "我同意 TIAI 根据 <privacy>隐私政策</privacy> 和 <disclosures>机构披露</disclosures> 使用我提交的信息，以回复本次咨询。",
+    "privacyConsentError": "请先确认隐私同意后再提交。"
+  },
+  "NotFound": {
+    "locale": "zh",
+    "eyebrow": "404",
+    "title": "页面不存在",
+    "body": "您访问的页面不存在，或相关内容已被调整。请通过下方链接返回 TIAI 官网主要页面。",
+    "primary": "返回首页",
+    "secondary": "了解 TIAI"
   },
   "Faculty": {
     "heroTag": "师资与顾问",
@@ -298,5 +385,107 @@
     "accept": "接受",
     "decline": "拒绝",
     "learnMore": "隐私政策"
+  },
+  "UniversityPartnerships": {
+    "heroTag": "面向大学与学院",
+    "heroTitle": "在清晰学术治理下建设高质量 AI 教育路径",
+    "heroBody": "TIAI 支持院校设计 AI、计算机科学、数学、英语、转学和衔接项目，同时保留院校对录取、学分、学生记录和证书学位的完整权威。",
+    "cta": "沟通合作模式",
+    "modelsTitle": "可讨论的合作模型",
+    "models": [
+      {
+        "title": "硕士衔接准备",
+        "body": "为跨专业学生补齐计算机、数学与 AI 基础，帮助其为研究生阶段学习做准备。最终录取决定由接收院校负责。"
+      },
+      {
+        "title": "有条件路径支持",
+        "body": "在院校政策框架内，TIAI 可协助设计计算机、数学、英语和 AI 基础预备课程。"
+      },
+      {
+        "title": "本科转学准备",
+        "body": "支持 Community College、2+2 或转学导向准备；学分与转学认定由相关院校决定。"
+      },
+      {
+        "title": "联合课程与师资发展",
+        "body": "支持联合课程开发、教师培训、课程授权讨论和 AI 教育质量评估。"
+      },
+      {
+        "title": "AI 实验室与应用研究合作",
+        "body": "与院校和产业伙伴探索 AI 教育、AI Agent、可靠 AI 和应用项目，避免夸大尚未公开的研究成果。"
+      },
+      {
+        "title": "国际教学中心模式",
+        "body": "在院校治理框架下支持本地教学、学生服务和运营协调。"
+      }
+    ],
+    "responsibilitiesTitle": "职责边界",
+    "responsibilities": [
+      {
+        "title": "TIAI 可支持",
+        "items": [
+          "项目设计与运营规划",
+          "AI、计算机、数学和英语桥梁课程",
+          "师资网络建设与教学支持",
+          "学生指导、学习进度跟踪与支持",
+          "质量保障报告与持续改进"
+        ]
+      },
+      {
+        "title": "合作院校保留",
+        "items": [
+          "录取与注册决定",
+          "学术政策与课程审批",
+          "学分、成绩单与学位权威",
+          "适用情况下的教师资质审核",
+          "认证与院校标准合规责任"
+        ]
+      }
+    ],
+    "processTitle": "合作流程",
+    "process": [
+      "明确院校目标、学生画像和目标路径。",
+      "将 TIAI 支持职责与院校治理要求逐项对齐。",
+      "先开展有限、可审计的试点，再评估扩展。"
+    ],
+    "disclaimer": "本网站任何内容均不构成录取、学分、转学、奖学金、签证或学位授予承诺。相关决定由具备相应权威的院校和机构按照其政策作出。"
+  },
+  "ForStudents": {
+    "heroTag": "面向学生",
+    "heroTitle": "补齐进入 AI、计算机与转学路径所需的基础能力",
+    "heroBody": "TIAI 面向需要系统补齐计算机、数学、AI 实践和学术路径准备的学习者。",
+    "cta": "咨询学生路径",
+    "fitTitle": "适合哪些学生",
+    "fitItems": [
+      "非计算机背景、希望进入 AI 或计算机方向的学生。",
+      "正在探索美国本科转学或研究生预备路径的国际学生。",
+      "希望通过项目制学习 AI，但不依赖虚假学位或就业承诺的学习者。",
+      "需要结构化进入应用 AI 能力体系的在职人员或应届毕业生。"
+    ],
+    "pathsTitle": "当前学习路径",
+    "pathItems": [
+      {
+        "title": "人工智能与机器学习",
+        "body": "AI 基础、机器学习实践、模型部署与负责任使用。",
+        "href": "/programs/ai-ml"
+      },
+      {
+        "title": "计算机科学基础",
+        "body": "编程、算法、系统思维和软件工程准备。",
+        "href": "/programs/cs"
+      },
+      {
+        "title": "信息系统",
+        "body": "数据、商业技术、数据库、分析和组织系统。",
+        "href": "/programs/information-systems"
+      }
+    ],
+    "applicationTitle": "咨询流程",
+    "applicationItems": [
+      "提交学术背景、目标和意向路径。",
+      "TIAI 进行匹配评估并建议准备路径或下一步沟通。",
+      "如涉及合作院校，录取、学分和注册流程按照该院校政策进行。",
+      "学生会获得 TIAI 可支持事项和不可承诺事项的清晰说明。"
+    ],
+    "disclaimer": "TIAI 不承诺录取、转学、学分认定、签证、就业或学位完成。实际结果取决于学生表现及相关院校和机构政策。"
   }
 }

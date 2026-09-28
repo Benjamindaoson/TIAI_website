@@ -56,8 +56,8 @@ export default function CookieBanner() {
           </Link>
         </p>
         <div className="flex gap-3 shrink-0">
-          <Button size="sm" variant="outline" onClick={handleDecline}>{t("decline")}</Button>
-          <Button size="sm" onClick={handleAccept}>{t("accept")}</Button>
+          <Button size="sm" variant="outline" className="border-slate-500 text-slate-100 hover:bg-slate-800" onClick={handleDecline}>{t("decline")}</Button>
+          <Button size="sm" className="bg-amber-400 text-slate-950 hover:bg-amber-300" onClick={handleAccept}>{t("accept")}</Button>
         </div>
       </div>
     </div>

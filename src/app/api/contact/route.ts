@@ -3,7 +3,10 @@ import { Resend } from 'resend'
 import { checkRateLimit } from '@/lib/rate-limit'
 import { verifyTurnstileToken } from '@/lib/turnstile'
 
-export const runtime = 'edge'
+const privacyConsentSchema = z.preprocess(
+  (value) => value === true || value === 'true' || value === 'on',
+  z.literal(true)
+)
 
 const schema = z.object({
   name: z.string().min(1).max(100),
@@ -13,6 +16,7 @@ const schema = z.object({
   message: z.string().min(1).max(2000),
   lang: z.enum(['en', 'zh']),
   turnstileToken: z.string().optional(),
+  privacyConsent: privacyConsentSchema,
   company: z.string().optional(),
 })
 
@@ -63,6 +67,7 @@ export async function POST(req: Request) {
     await resend.emails.send({
       from: 'TIAI Contact <noreply@texasinstituteofai.org>',
       to: adminEmail,
+      replyTo: email,
       subject: `New contact form submission: ${program}`,
       text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone ?? 'N/A'}\nProgram: ${program}\nLang: ${lang}\n\n${message}`,
     })

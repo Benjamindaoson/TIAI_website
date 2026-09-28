@@ -1,9 +1,37 @@
 import { getAllPostMeta } from '@/lib/mdx'
 import { getTranslations } from 'next-intl/server'
+import type { Metadata } from 'next'
 import Link from 'next/link'
+import { getSiteUrl } from '@/lib/site'
 import { localizedHref } from '@/lib/routes'
 
 const POSTS_PER_PAGE = 8
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>
+}): Promise<Metadata> {
+  const { lang } = await params
+  const t = await getTranslations({ locale: lang, namespace: 'Blog' })
+  const siteUrl = getSiteUrl()
+  return {
+    title: `${t('title')} | TIAI`,
+    description: t('subtitle'),
+    alternates: {
+      canonical: `${siteUrl}/${lang}/blog`,
+      languages: { en: `${siteUrl}/en/blog`, zh: `${siteUrl}/zh/blog` },
+    },
+    openGraph: {
+      title: `${t('title')} | TIAI`,
+      description: t('subtitle'),
+      url: `${siteUrl}/${lang}/blog`,
+      siteName: 'TIAI',
+      type: 'website',
+      locale: lang === 'zh' ? 'zh_CN' : 'en_US',
+    },
+  }
+}
 
 export default async function BlogPage({
   params,

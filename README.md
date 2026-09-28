@@ -37,20 +37,9 @@ This value is used by:
 - `NEXT_PUBLIC_TURNSTILE_SITE_KEY`
 - `TURNSTILE_SECRET_KEY`
 
-## Recommended Free Deployment (Cloudflare Pages)
+## Deployment
 
-1. Push this repo to GitHub.
-2. In Cloudflare Dashboard, create a Pages project from this repo.
-3. Build settings:
-   - Framework preset: `Next.js`
-   - Build command: `npm run build`
-   - Build output directory: `.next`
-4. Environment variables:
-   - `NEXT_PUBLIC_SITE_URL=https://texasinstituteofai.org`
-5. Add custom domain:
-   - `texasinstituteofai.org`
-   - `www.texasinstituteofai.org` (optional, then redirect one to the other)
-6. Ensure DNS points to Cloudflare and SSL/TLS is active.
+See [`docs/deployment.md`](docs/deployment.md) for staging setup, production environment variables, smoke tests, and Cloudflare notes. Vercel is the preferred first staging target because this project includes a Next.js API route.
 
 ## SEO Checklist (Google + Baidu)
 

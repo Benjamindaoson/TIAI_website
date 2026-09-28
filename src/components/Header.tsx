@@ -24,27 +24,27 @@ export default function Header({ locale }: { locale: string }) {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href={localizedHref(locale)} className="flex items-center space-x-2">
-          <span className="text-xl font-bold tracking-tight text-slate-900">TIAI</span>
+          <span className="text-xl font-bold tracking-tight text-slate-100">TIAI</span>
         </Link>
         
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-          <Link href={localizedHref(locale, "/programs/ai-ml")} className="transition-colors hover:text-primary">
-            {t("programsNav")}
-          </Link>
-          <Link href={localizedHref(locale, "/blog")} className="transition-colors hover:text-primary">
-            {t("blog")}
-          </Link>
           <Link href={localizedHref(locale, "/about")} className="transition-colors hover:text-primary">
             {t("about")}
           </Link>
           <Link href={anchorHref(locale, "programs")} className="transition-colors hover:text-primary">
             {t("programs")}
           </Link>
-          <Link href={anchorHref(locale, "partnership")} className="transition-colors hover:text-primary">
-            {t("partnership")}
+          <Link href={localizedHref(locale, "/university-partnerships")} className="transition-colors hover:text-primary">
+            {t("universities")}
+          </Link>
+          <Link href={localizedHref(locale, "/for-students")} className="transition-colors hover:text-primary">
+            {t("students")}
           </Link>
           <Link href={localizedHref(locale, "/faculty")} className="transition-colors hover:text-primary">
             {t("faculty")}
+          </Link>
+          <Link href={localizedHref(locale, "/blog")} className="transition-colors hover:text-primary">
+            {t("blog")}
           </Link>
           <Link href={anchorHref(locale, "insights")} className="transition-colors hover:text-primary">
             {t("insights")}

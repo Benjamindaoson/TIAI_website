@@ -45,6 +45,15 @@ export default async function IsPage({ params }: { params: Promise<{ lang: strin
         title: t('requirements.title'),
         items: t.raw('requirements.items') as string[],
       }}
+      details={{
+        formatTitle: t('details.formatTitle'),
+        formatItems: t.raw('details.formatItems') as string[],
+        assessmentTitle: t('details.assessmentTitle'),
+        assessmentItems: t.raw('details.assessmentItems') as string[],
+        applicationTitle: t('details.applicationTitle'),
+        applicationItems: t.raw('details.applicationItems') as string[],
+        disclaimer: t('details.disclaimer'),
+      }}
     />
   )
 }

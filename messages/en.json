@@ -9,14 +9,17 @@
     "insights": "Insights",
     "contact": "Contact",
     "closeMenu": "Close menu",
-    "openMenu": "Open menu"
+    "openMenu": "Open menu",
+    "mobileMenu": "Site navigation",
+    "universities": "Universities",
+    "students": "Students"
   },
   "Landing": {
     "heroTag": "Nonprofit Education | Austin, Texas",
     "heroTitle": "Educating the Next Generation of AI Practitioners",
-    "heroBody": "Texas Institute of Artificial Intelligence partners with accredited U.S. institutions to deliver career-focused AI, Computer Science, and Information Systems education for international talent pathways.",
-    "ctaPrimary": "Institutional Partnership",
-    "ctaSecondary": "Join Faculty Network",
+    "heroBody": "Texas Institute of Artificial Intelligence is a Texas nonprofit building AI, computer science, and transfer-ready education pathways with accredited institutions and academic partners.",
+    "ctaPrimary": "University Partnerships",
+    "ctaSecondary": "Student Pathways",
     "aboutTag": "About",
     "aboutTitle": "Institutional Mission and Standing",
     "aboutBody": "TIAI is a Texas nonprofit focused on rigorous, employment-driven AI education through accredited institutional partnerships.",
@@ -36,16 +39,16 @@
     "program3Body": "Applied business-technology tracks: databases, BI, data workflows, and enterprise systems.",
     "partnershipTag": "Partnership",
     "partnershipTitle": "A Practical Model for College AI Programs",
-    "partnershipBody": "TIAI acts as an instructional partner: institutions keep academic authority while TIAI provides delivery capacity and AI faculty network support.",
+    "partnershipBody": "TIAI is designed to serve as an instructional and program-development partner. Academic authority, admission decisions, credit, transcripts, and degree conferral remain with duly authorized institutions.",
     "partnershipHowTitle": "How It Works",
     "partnershipStep1": "Initial consultation to align strategic goals, enrollment targets, and implementation scope.",
     "partnershipStep2": "Faculty and curriculum alignment under institutional governance and credential standards.",
     "partnershipStep3": "Program launch with student support and transfer-outcome monitoring.",
     "partnershipCardTitle": "What Institutions Receive",
-    "partnershipPoint1": "Enrollment growth support with auditable operating model",
-    "partnershipPoint2": "Access to AI/CS instructor network and curriculum support",
-    "partnershipPoint3": "Transfer-outcome oriented student services",
-    "partnershipPoint4": "Simple service-fee model without complex revenue-sharing structure",
+    "partnershipPoint1": "Program design and implementation support for AI, CS, math, and English bridge needs",
+    "partnershipPoint2": "Curriculum development, instructor network, and student support capacity",
+    "partnershipPoint3": "Clear role separation between TIAI services and institutional academic authority",
+    "partnershipPoint4": "Quality assurance practices suitable for long-term institutional relationships",
     "partnershipGovernanceTitle": "Academic Governance",
     "partnershipGovernanceBody": "Curriculum is submitted for institutional approval, instructors are credentialed by standards, and student records remain fully within college systems.",
     "facultyTag": "Faculty",
@@ -79,15 +82,25 @@
     "contactBody": "For partnership, faculty, or admissions inquiries, contact the team directly and we will respond with next steps.",
     "contactAddressTitle": "Mailing Address",
     "contactAddressBody": "Texas Institute of Artificial Intelligence\n5900 Balcones Drive, Suite 100\nAustin, TX 78731\nUnited States",
-    "contactMail1": "Institutional Partnership | partnerships@tiai.edu",
-    "contactMail2": "Faculty & Advisors | faculty@tiai.edu",
-    "contactMail3": "Admissions | admissions@tiai.edu"
+    "contactMail1": "Institutional Partnership | partnerships@texasinstituteofai.org",
+    "contactMail2": "Faculty & Advisors | faculty@texasinstituteofai.org",
+    "contactMail3": "Student Inquiry | admissions@texasinstituteofai.org"
   },
   "Footer": {
     "address": "Texas, USA",
-    "nonprofit": "TIAI is a non-profit educational initiative.",
+    "nonprofit": "TIAI is a Texas nonprofit educational institution-building initiative.",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+    "terms": "Terms of Service",
+    "accessibility": "Accessibility",
+    "nonDiscrimination": "Non-Discrimination",
+    "refund": "Refund & Cancellation",
+    "disclosures": "Institutional Disclosures",
+    "about": "About",
+    "universities": "Universities",
+    "students": "Students",
+    "admissions": "Admissions",
+    "tuition": "Tuition",
+    "faq": "FAQ"
   },
   "Blog": {
     "backToNews": "Back to News",
@@ -143,6 +156,27 @@
           "English proficiency (TOEFL 80+ or IELTS 6.5+)",
           "Basic programming experience (Python preferred)"
         ]
+      },
+      "details": {
+        "formatTitle": "Format and timeline",
+        "formatItems": [
+          "Instructor-led study with project work and guided independent practice.",
+          "Typical preparation plans can be adjusted by student background and institutional requirements.",
+          "Courses may be delivered online, hybrid, or through approved partner settings."
+        ],
+        "assessmentTitle": "Assessment",
+        "assessmentItems": [
+          "Programming or applied assignments where relevant.",
+          "Portfolio-style projects and written reflections.",
+          "Progress checks aligned to the pathway goal rather than unsupported outcome guarantees."
+        ],
+        "applicationTitle": "Application steps",
+        "applicationItems": [
+          "Share your academic background and intended pathway.",
+          "Complete an advising conversation and readiness review.",
+          "Receive a recommended preparation plan and next steps."
+        ],
+        "disclaimer": "This program description is for preparation and advising. Admission, credit, transfer, transcript, and degree decisions are made only by authorized institutions under their own policies."
       }
     },
     "cs": {
@@ -174,7 +208,7 @@
       "outcomes": {
         "title": "Learning Outcomes",
         "items": [
-          "Transfer to accredited U.S. CS programs",
+          "Prepare for transfer-oriented CS study under institution-specific requirements",
           "Solve algorithmic problems at industry standard",
           "Design and build full-stack software systems",
           "Apply software engineering best practices"
@@ -187,6 +221,27 @@
           "English proficiency (TOEFL 70+ or IELTS 6.0+)",
           "Basic math background (pre-calculus or above)"
         ]
+      },
+      "details": {
+        "formatTitle": "Format and timeline",
+        "formatItems": [
+          "Instructor-led study with project work and guided independent practice.",
+          "Typical preparation plans can be adjusted by student background and institutional requirements.",
+          "Courses may be delivered online, hybrid, or through approved partner settings."
+        ],
+        "assessmentTitle": "Assessment",
+        "assessmentItems": [
+          "Programming or applied assignments where relevant.",
+          "Portfolio-style projects and written reflections.",
+          "Progress checks aligned to the pathway goal rather than unsupported outcome guarantees."
+        ],
+        "applicationTitle": "Application steps",
+        "applicationItems": [
+          "Share your academic background and intended pathway.",
+          "Complete an advising conversation and readiness review.",
+          "Receive a recommended preparation plan and next steps."
+        ],
+        "disclaimer": "This program description is for preparation and advising. Admission, credit, transfer, transcript, and degree decisions are made only by authorized institutions under their own policies."
       }
     },
     "information-systems": {
@@ -231,6 +286,27 @@
           "English proficiency (TOEFL 75+ or IELTS 6.0+)",
           "Basic understanding of business operations"
         ]
+      },
+      "details": {
+        "formatTitle": "Format and timeline",
+        "formatItems": [
+          "Instructor-led study with project work and guided independent practice.",
+          "Typical preparation plans can be adjusted by student background and institutional requirements.",
+          "Courses may be delivered online, hybrid, or through approved partner settings."
+        ],
+        "assessmentTitle": "Assessment",
+        "assessmentItems": [
+          "Programming or applied assignments where relevant.",
+          "Portfolio-style projects and written reflections.",
+          "Progress checks aligned to the pathway goal rather than unsupported outcome guarantees."
+        ],
+        "applicationTitle": "Application steps",
+        "applicationItems": [
+          "Share your academic background and intended pathway.",
+          "Complete an advising conversation and readiness review.",
+          "Receive a recommended preparation plan and next steps."
+        ],
+        "disclaimer": "This program description is for preparation and advising. Admission, credit, transfer, transcript, and degree decisions are made only by authorized institutions under their own policies."
       }
     }
   },
@@ -249,7 +325,18 @@
     "message": "Message",
     "submit": "Send Message",
     "sending": "Sending...",
-    "successMessage": "Thank you! We will be in touch within 2 business days."
+    "successMessage": "Thank you! We will be in touch within 2 business days.",
+    "errorMessage": "We could not send your message right now. Please email partnerships@texasinstituteofai.org or try again later.",
+    "privacyConsent": "I agree that TIAI may use my information to respond to this inquiry in accordance with the <privacy>Privacy Policy</privacy> and <disclosures>Institutional Disclosures</disclosures>.",
+    "privacyConsentError": "Please confirm the privacy consent before submitting."
+  },
+  "NotFound": {
+    "locale": "en",
+    "eyebrow": "404",
+    "title": "Page not found",
+    "body": "The page you requested does not exist or is no longer available. Use the links below to return to the main TIAI website.",
+    "primary": "Return to Home",
+    "secondary": "About TIAI"
   },
   "Faculty": {
     "heroTag": "Faculty & Advisors",
@@ -298,5 +385,107 @@
     "accept": "Accept",
     "decline": "Decline",
     "learnMore": "Privacy Policy"
+  },
+  "UniversityPartnerships": {
+    "heroTag": "For Universities and Colleges",
+    "heroTitle": "Build rigorous AI pathways with clear academic governance",
+    "heroBody": "TIAI works with institutions on AI, computer science, mathematics, English, transfer, and pathway program design while preserving each institution's authority over admission, credit, records, and credentials.",
+    "cta": "Discuss a Partnership",
+    "modelsTitle": "Partnership models under discussion",
+    "models": [
+      {
+        "title": "Master's pathway preparation",
+        "body": "Bridge coursework can help students from non-CS backgrounds prepare for graduate-level study in computing, data, and AI. Any admission decision remains with the receiving institution."
+      },
+      {
+        "title": "Conditional pathway support",
+        "body": "TIAI can help design preparatory study in computing, mathematics, English, and AI foundations for institutions that choose to evaluate students through their own policies."
+      },
+      {
+        "title": "Undergraduate transfer readiness",
+        "body": "Programs can support community college, 2+2, or transfer-oriented preparation where credit and articulation decisions remain under institutional control."
+      },
+      {
+        "title": "Curriculum and faculty development",
+        "body": "TIAI can support joint curriculum development, instructor preparation, course licensing discussions, and quality review for AI education."
+      },
+      {
+        "title": "AI lab and applied research collaboration",
+        "body": "Institutions and industry partners can explore applied AI education, AI agents, reliable AI, and workforce-aligned projects without overstating current research output."
+      },
+      {
+        "title": "International teaching center model",
+        "body": "TIAI can help coordinate local teaching support and student services where governance, records, and credential decisions remain with authorized institutions."
+      }
+    ],
+    "responsibilitiesTitle": "Role clarity",
+    "responsibilities": [
+      {
+        "title": "TIAI can support",
+        "items": [
+          "Program design and operational planning",
+          "Bridge curriculum in AI, CS, math, and English foundations",
+          "Instructor network development and teaching support",
+          "Student advising, progress monitoring, and learning support",
+          "Quality assurance reporting and continuous improvement"
+        ]
+      },
+      {
+        "title": "Partner institutions retain",
+        "items": [
+          "Admission and enrollment decisions",
+          "Academic policy and curriculum approval",
+          "Credit, transcript, and degree authority",
+          "Instructor credential review where applicable",
+          "Compliance with accreditation and institutional standards"
+        ]
+      }
+    ],
+    "processTitle": "Partnership process",
+    "process": [
+      "Clarify institutional goals, student profile, and target pathway.",
+      "Map TIAI support responsibilities against institutional governance requirements.",
+      "Pilot a limited, auditable program before broader expansion."
+    ],
+    "disclaimer": "No page on this site should be read as a promise of admission, academic credit, transfer acceptance, financial aid, immigration outcome, or degree conferral. Those decisions belong to the authorized institutions and agencies responsible for them."
+  },
+  "ForStudents": {
+    "heroTag": "For Students",
+    "heroTitle": "Build the foundations needed for AI, CS, and transfer pathways",
+    "heroBody": "TIAI is designed for learners who need a serious bridge into computing, mathematics, AI practice, and institution-approved academic pathways.",
+    "cta": "Ask About Student Pathways",
+    "fitTitle": "Who this is for",
+    "fitItems": [
+      "Students from non-CS backgrounds who need computing and math foundations before advanced AI study.",
+      "International students exploring U.S. undergraduate transfer or graduate preparation routes.",
+      "Learners who want project-based AI education without relying on unsupported degree or job guarantees.",
+      "Working professionals and recent graduates who need a structured path into applied AI skills."
+    ],
+    "pathsTitle": "Current learning paths",
+    "pathItems": [
+      {
+        "title": "AI & Machine Learning",
+        "body": "Applied AI foundations, machine learning practice, model deployment, and responsible use.",
+        "href": "/programs/ai-ml"
+      },
+      {
+        "title": "Computer Science Foundations",
+        "body": "Programming, algorithms, systems thinking, and software engineering preparation.",
+        "href": "/programs/cs"
+      },
+      {
+        "title": "Information Systems",
+        "body": "Data, business technology, databases, analytics, and organizational systems.",
+        "href": "/programs/information-systems"
+      }
+    ],
+    "applicationTitle": "How inquiry works",
+    "applicationItems": [
+      "Submit your academic background, goals, and preferred pathway.",
+      "TIAI reviews fit and recommends a preparation path or next conversation.",
+      "If a partner institution is involved, admission, credit, and enrollment steps follow that institution's policies.",
+      "Students receive a clear explanation of what TIAI can support and what it cannot promise."
+    ],
+    "disclaimer": "TIAI does not promise admission, transfer, credit recognition, visa approval, employment, or degree completion. Program outcomes depend on student performance and the policies of relevant institutions and agencies."
   }
 }

@@ -1,8 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -10,15 +9,10 @@ import CookieBanner from "@/components/CookieBanner";
 import Analytics from "@/components/Analytics";
 import { getSiteUrl, isLocale } from "@/lib/site";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
 export async function generateMetadata({
   params,
@@ -31,7 +25,7 @@ export async function generateMetadata({
 
   const title =
     locale === "zh"
-      ? "德州人工智能学院 | Texas Institute of Artificial Intelligence"
+      ? "德州人工智能研究院 | Texas Institute of Artificial Intelligence"
       : "Texas Institute of Artificial Intelligence";
 
   const description =
@@ -82,7 +76,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col bg-slate-950`}>
+      <body className="antialiased min-h-screen flex flex-col bg-slate-950">
         <NextIntlClientProvider messages={messages}>
           <Header locale={locale} />
           <main className="flex-grow">{children}</main>

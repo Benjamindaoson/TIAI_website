@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getSiteUrl, locales, programSlugs, staticPageSlugs } from "@/lib/site";
+import { getAllSlugs } from "@/lib/mdx";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -46,6 +47,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.7,
     })),
+    // Blog posts
+    ...getAllSlugs().map(({ lang, slug }) => ({
+      url: `${siteUrl}/${lang}/blog/${slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    })),
     // Static content pages
     ...staticPageSlugs.flatMap((slug) =>
       locales.map((lang) => ({
@@ -53,6 +61,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: now,
         changeFrequency: 'monthly' as const,
         priority: 0.6,
+        alternates: {
+          languages: {
+            en: `${siteUrl}/en/${slug}`,
+            zh: `${siteUrl}/zh/${slug}`,
+          },
+        },
       }))
     ),
   ];
