@@ -27,6 +27,7 @@ export default function ProgramPage({ lang, hero, overview, courses, outcomes, r
       <section className="container mx-auto px-4 py-24 max-w-4xl">
         <h1 className="text-4xl font-bold text-slate-100 mb-4 md:text-5xl">{hero.title}</h1>
         <p className="text-xl text-slate-400 mb-8">{hero.tagline}</p>
+        <p className="mb-8 border border-amber-500/30 bg-slate-950 p-4 text-sm leading-6 text-slate-300">{details.disclaimer}</p>
         <Link href={anchorHref(lang, 'contact')}>
           <Button size="lg" className="bg-amber-400 text-slate-950 hover:bg-amber-300">{hero.cta}</Button>
         </Link>
@@ -129,7 +130,6 @@ export default function ProgramPage({ lang, hero, overview, courses, outcomes, r
               </li>
             ))}
           </ol>
-          <p className="mb-8 border border-amber-500/30 bg-slate-950 p-4 text-sm leading-6 text-slate-300">{details.disclaimer}</p>
           <Link href={anchorHref(lang, 'contact')}>
             <Button size="lg" className="bg-amber-400 text-slate-950 hover:bg-amber-300">{hero.cta}</Button>
           </Link>
