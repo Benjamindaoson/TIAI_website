@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import "../globals.css";
 import Header from "@/components/Header";
@@ -23,15 +23,9 @@ export async function generateMetadata({
   const locale = isLocale(lang) ? lang : "en";
   const siteUrl = getSiteUrl();
 
-  const title =
-    locale === "zh"
-      ? "德州人工智能研究院 | Texas Institute of Artificial Intelligence"
-      : "Texas Institute of Artificial Intelligence";
-
-  const description =
-    locale === "zh"
-      ? "TIAI 是美国得州非营利机构，聚焦 AI、计算机科学与信息系统教育合作。"
-      : "TIAI is a Texas nonprofit focused on AI, Computer Science, and Information Systems education partnerships.";
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+  const title = t("title");
+  const description = t("description");
 
   return {
     title,

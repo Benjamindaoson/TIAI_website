@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ContactForm from "@/components/ContactForm";
-import { localizedHref } from "@/lib/routes";
+import { anchorHref, localizedHref } from "@/lib/routes";
 
 export default async function Home({
   params,
@@ -23,10 +23,10 @@ export default async function Home({
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">{t("heroBody")}</p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Button asChild className="bg-amber-400 text-slate-950 hover:bg-amber-300">
-              <Link href={localizedHref(lang, "/university-partnerships")}>{t("ctaPrimary")}</Link>
+              <Link href={anchorHref(lang, "programs")}>{t("ctaPrimary")}</Link>
             </Button>
             <Button asChild variant="outline" className="border-amber-400 text-amber-300 hover:bg-amber-400/10">
-              <Link href={localizedHref(lang, "/for-students")}>{t("ctaSecondary")}</Link>
+              <Link href={localizedHref(lang, "/about")}>{t("ctaSecondary")}</Link>
             </Button>
           </div>
         </div>
@@ -37,7 +37,7 @@ export default async function Home({
           <p className="text-xs uppercase tracking-[0.2em] text-amber-400">{t("aboutTag")}</p>
           <h2 className="mt-3 text-3xl font-light text-white md:text-4xl">{t("aboutTitle")}</h2>
           <p className="mt-6 max-w-4xl text-lg leading-8 text-slate-300">{t("aboutBody")}</p>
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
+          <div className="mt-10 grid gap-4 md:grid-cols-2">
             <article className="border border-amber-500/20 bg-slate-900 p-6">
               <h3 className="text-sm uppercase tracking-[0.14em] text-amber-300">{t("aboutPoint1Title")}</h3>
               <p className="mt-3 leading-7 text-slate-300">{t("aboutPoint1Body")}</p>
@@ -50,6 +50,10 @@ export default async function Home({
               <h3 className="text-sm uppercase tracking-[0.14em] text-amber-300">{t("aboutPoint3Title")}</h3>
               <p className="mt-3 leading-7 text-slate-300">{t("aboutPoint3Body")}</p>
             </article>
+            <article className="border border-amber-500/20 bg-slate-900 p-6">
+              <h3 className="text-sm uppercase tracking-[0.14em] text-amber-300">{t("aboutPoint4Title")}</h3>
+              <p className="mt-3 leading-7 text-slate-300">{t("aboutPoint4Body")}</p>
+            </article>
           </div>
         </div>
       </section>
@@ -58,6 +62,8 @@ export default async function Home({
         <div className="mx-auto max-w-6xl">
           <p className="text-xs uppercase tracking-[0.2em] text-amber-400">{t("programsTag")}</p>
           <h2 className="mt-3 text-3xl font-light text-white md:text-4xl">{t("programsTitle")}</h2>
+          <p className="mt-6 max-w-4xl text-lg leading-8 text-slate-300">{t("programsBody")}</p>
+          <p className="mt-4 max-w-4xl text-sm leading-7 text-slate-300">{t("programsStatus")}</p>
           <div className="mt-10 grid gap-4 md:grid-cols-3">
             <Link href={localizedHref(lang, "/programs/ai-ml")} className="border border-amber-500/20 bg-slate-900 p-6 transition-colors hover:border-amber-400/60">
               <h3 className="text-xl text-white">{t("program1Title")}</h3>
@@ -81,6 +87,9 @@ export default async function Home({
             <p className="text-xs uppercase tracking-[0.2em] text-amber-400">{t("partnershipTag")}</p>
             <h2 className="mt-3 text-3xl font-light text-white md:text-4xl">{t("partnershipTitle")}</h2>
             <p className="mt-6 max-w-5xl leading-8 text-slate-300">{t("partnershipBody")}</p>
+            <Link href={localizedHref(lang, "/university-partnerships")} className="mt-4 inline-block text-amber-300 underline underline-offset-4 hover:text-amber-200">
+              {t("partnershipCta")}
+            </Link>
           </div>
           <div className="mt-10 grid gap-4 lg:grid-cols-2">
             <div className="border border-amber-500/20 bg-slate-900 p-6">

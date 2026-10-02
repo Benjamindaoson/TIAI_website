@@ -15,61 +15,61 @@
     "students": "Students"
   },
   "Landing": {
-    "heroTag": "Nonprofit Education | Austin, Texas",
-    "heroTitle": "Educating the Next Generation of AI Practitioners",
-    "heroBody": "Texas Institute of Artificial Intelligence is a Texas nonprofit building AI, computer science, and transfer-ready education pathways with accredited institutions and academic partners.",
-    "ctaPrimary": "University Partnerships",
-    "ctaSecondary": "Student Pathways",
-    "aboutTag": "About",
-    "aboutTitle": "Institutional Mission and Standing",
-    "aboutBody": "TIAI is a Texas nonprofit focused on rigorous, employment-driven AI education through accredited institutional partnerships.",
-    "aboutPoint1Title": "Employment First",
-    "aboutPoint1Body": "Every curriculum decision is aligned to practical outcomes in AI, CS, and Information Systems careers.",
-    "aboutPoint2Title": "Institutional Integrity",
-    "aboutPoint2Body": "Academic authority remains with accredited partner colleges, including approvals, transcripts, and degrees.",
-    "aboutPoint3Title": "Accessible Pathways",
-    "aboutPoint3Body": "The 2+2 pathway model supports structured, cost-efficient transfer outcomes for international students.",
+    "heroTag": "Nonprofit AI Education | Austin, Texas",
+    "heroTitle": "Texas Institute of Artificial Intelligence",
+    "heroBody": "TIAI is a Texas nonprofit focused on AI education and applied research. We are developing an education model that brings AI into subject learning, project work and assessment, helping learners build knowledge, sound judgment and capabilities they can demonstrate.",
+    "ctaPrimary": "Explore Academic Areas",
+    "ctaSecondary": "About TIAI",
+    "aboutTag": "Our Educational Approach",
+    "aboutTitle": "Connecting Learning to Demonstrable Capability",
+    "aboutBody": "Learners need support to apply classroom knowledge to open-ended problems, evaluate AI-generated work and explain their own contribution. Our AI-native education model connects these needs across curriculum, projects, assessment and preparation for professional practice.",
+    "aboutPoint1Title": "AI Across the Curriculum",
+    "aboutPoint1Body": "Build subject knowledge through guided study, AI-assisted exploration and independent practice. Learning goals define when to use AI, how to check its output and what students must understand for themselves.",
+    "aboutPoint2Title": "Projects with Real Constraints",
+    "aboutPoint2Body": "Frame a problem, investigate evidence and develop a solution within defined user needs, time and resource limits. Record decisions, test results and revisions so the work can be reviewed.",
+    "aboutPoint3Title": "Assessment with Evidence",
+    "aboutPoint3Body": "Combine project demonstrations, reproducible tests and oral explanations. Make each learner’s reasoning, AI use and individual contribution visible, with feedback guiding the next round of practice.",
     "programsTag": "Programs",
-    "programsTitle": "Career-Ready Technology Curriculum",
+    "programsTitle": "Academic Areas in Development",
     "program1Title": "Artificial Intelligence & Machine Learning",
-    "program1Body": "From foundations to deployment: modern AI methods, model systems, and applied practice.",
+    "program1Body": "Study how AI systems learn, build applications and evaluate their reliability. Proposed projects connect models and data with practical questions and responsible use.",
     "program2Title": "Computer Science & Software Engineering",
-    "program2Body": "Transfer-aligned CS curriculum including algorithms, systems, and engineering methods.",
+    "program2Body": "Develop foundations in programming, algorithms and systems. Use AI throughout software development while learning to explain, test and maintain the resulting work.",
     "program3Title": "Information Systems & Data Analytics",
-    "program3Body": "Applied business-technology tracks: databases, BI, data workflows, and enterprise systems.",
+    "program3Body": "Connect data and AI with organizational needs. Investigate workflows, build analysis tools and evaluate the quality and usefulness of the results.",
     "partnershipTag": "Partnership",
-    "partnershipTitle": "A Practical Model for College AI Programs",
-    "partnershipBody": "TIAI is designed to serve as an instructional and program-development partner. Academic authority, admission decisions, credit, transcripts, and degree conferral remain with duly authorized institutions.",
-    "partnershipHowTitle": "How It Works",
-    "partnershipStep1": "Initial consultation to align strategic goals, enrollment targets, and implementation scope.",
-    "partnershipStep2": "Faculty and curriculum alignment under institutional governance and credential standards.",
-    "partnershipStep3": "Program launch with student support and transfer-outcome monitoring.",
-    "partnershipCardTitle": "What Institutions Receive",
-    "partnershipPoint1": "Program design and implementation support for AI, CS, math, and English bridge needs",
-    "partnershipPoint2": "Curriculum development, instructor network, and student support capacity",
-    "partnershipPoint3": "Clear role separation between TIAI services and institutional academic authority",
-    "partnershipPoint4": "Quality assurance practices suitable for long-term institutional relationships",
-    "partnershipGovernanceTitle": "Academic Governance",
-    "partnershipGovernanceBody": "Curriculum is submitted for institutional approval, instructors are credentialed by standards, and student records remain fully within college systems.",
+    "partnershipTitle": "Developing AI Education with Universities",
+    "partnershipBody": "We welcome discussions with universities and colleges about curriculum, project-based learning and student support. Potential collaborations begin with agreed educational goals, clear responsibilities and the institution’s approval process.",
+    "partnershipHowTitle": "A Proposed Collaboration Process",
+    "partnershipStep1": "Identify learner needs, intended capabilities and the scope of a possible collaboration.",
+    "partnershipStep2": "Develop a curriculum, project and assessment plan for institutional review.",
+    "partnershipStep3": "After agreements and approvals, define a pilot and review the learning evidence before considering expansion.",
+    "partnershipCardTitle": "Areas for Joint Development",
+    "partnershipPoint1": "Academic foundations and AI-supported learning activities",
+    "partnershipPoint2": "Project briefs, mentoring and student learning support",
+    "partnershipPoint3": "Assessment criteria, individual contribution records and portfolios",
+    "partnershipPoint4": "Applied research questions and evaluation of educational practice",
+    "partnershipGovernanceTitle": "Institutional Responsibilities",
+    "partnershipGovernanceBody": "Any collaboration would require a formal agreement. Academic approvals, admission, credit, transcripts and degree conferral remain with duly authorized institutions. No specific partnership or accredited program is announced here.",
     "facultyTag": "Faculty",
-    "facultyTitle": "Founding Faculty and Advisor Network",
-    "facultyBody": "We welcome researchers, doctoral candidates, and industry practitioners to co-build high-quality AI education pathways.",
-    "facultyBenefit1Title": "Formal Institutional Affiliation",
-    "facultyBenefit1Body": "Contribute within an accredited U.S. college program environment with clear academic positioning.",
-    "facultyBenefit2Title": "Priority Instructor Opportunities",
-    "facultyBenefit2Body": "Founding network members receive early priority for paid teaching opportunities as programs scale.",
-    "facultyBenefit3Title": "Curriculum Contribution Recognition",
-    "facultyBenefit3Body": "Applied curriculum work can be formally attributed as part of institutional teaching practice.",
-    "facultyBenefit4Title": "Direct Student Impact",
-    "facultyBenefit4Body": "Help shape global student pathways into the U.S. AI and technology workforce.",
+    "facultyTitle": "Help Shape the Learning Experience",
+    "facultyBody": "We invite educators, researchers and practitioners to discuss contributions to curriculum, mentoring and assessment. Specific roles and terms depend on the project and a separate agreement.",
+    "facultyBenefit1Title": "Curriculum Development",
+    "facultyBenefit1Body": "Connect subject foundations with responsible AI use and explicit learning goals.",
+    "facultyBenefit2Title": "Project Mentoring",
+    "facultyBenefit2Body": "Help learners define problems, test approaches and explain technical decisions.",
+    "facultyBenefit3Title": "Assessment Design",
+    "facultyBenefit3Body": "Develop ways to review project quality, independent understanding and individual contributions.",
+    "facultyBenefit4Title": "Applied Research",
+    "facultyBenefit4Body": "Explore questions in AI-supported learning and domain applications through carefully scoped studies.",
     "insightsTag": "Insights",
-    "insightsTitle": "Research and Program Insights",
-    "insight1Title": "AI Workforce Readiness",
-    "insight1Body": "How curriculum design maps to job outcomes in U.S. tech markets.",
-    "insight2Title": "Transfer Pathway Strategy",
-    "insight2Body": "Designing 2+2 pathways with strong articulation and transfer success.",
-    "insight3Title": "Academic-Industry Alignment",
-    "insight3Body": "Balancing institutional standards with real-world engineering practice.",
+    "insightsTitle": "Questions Guiding Our Development",
+    "insight1Title": "Learning with AI",
+    "insight1Body": "How can AI support practice and feedback while strengthening independent understanding?",
+    "insight2Title": "Evidence of Capability",
+    "insight2Body": "Which project records, tests and explanations show what a learner can do?",
+    "insight3Title": "Knowledge in Practice",
+    "insight3Body": "How can academic foundations inform useful work in industry, research and public service?",
     "insightRegistryTitle": "Institutional Registry Snapshot",
     "registryLine1": "Legal Name: Texas Institute of Artificial Intelligence",
     "registryLine2": "Entity Type: Domestic Nonprofit Corporation (Texas)",
@@ -78,17 +78,22 @@
     "registryLine5": "Effective Date: August 11, 2025",
     "registryLine6": "Principal Office: 5900 Balcones Drive, Suite 100, Austin, TX 78731",
     "contactTag": "Contact",
-    "contactTitle": "Start a Conversation",
-    "contactBody": "For partnership, faculty, or admissions inquiries, contact the team directly and we will respond with next steps.",
+    "contactTitle": "Talk with TIAI",
+    "contactBody": "Contact us about learning plans, university collaboration or contributions to teaching and research. We will explain the current scope and relevant next steps.",
     "contactAddressTitle": "Mailing Address",
     "contactAddressBody": "Texas Institute of Artificial Intelligence\n5900 Balcones Drive, Suite 100\nAustin, TX 78731\nUnited States",
     "contactMail1": "Institutional Partnership | partnerships@texasinstituteofai.org",
     "contactMail2": "Faculty & Advisors | faculty@texasinstituteofai.org",
-    "contactMail3": "Student Inquiry | admissions@texasinstituteofai.org"
+    "contactMail3": "Student Inquiry | admissions@texasinstituteofai.org",
+    "aboutPoint4Title": "Preparation for Professional Practice",
+    "aboutPoint4Body": "Build a portfolio that shows technical work, collaboration, communication and responsible judgment. These capabilities support further study and career development; admission and hiring decisions belong to the relevant institutions and employers.",
+    "programsBody": "Our planning connects AI, computing and information systems with undergraduate preparation, master’s preparation and potential university-led master’s collaborations. Each area brings together foundational study, applied projects and evidence of learning.",
+    "programsStatus": "These are proposed areas for development and discussion. Delivery, enrollment and any university collaboration depend on confirmed arrangements and applicable approvals. TIAI does not award degrees or guarantee credit, transfer, admission, employment or accreditation.",
+    "partnershipCta": "Discuss University Collaboration"
   },
   "Footer": {
     "address": "Texas, USA",
-    "nonprofit": "TIAI is a Texas nonprofit educational institution-building initiative.",
+    "nonprofit": "TIAI is a Texas nonprofit focused on AI education and applied research.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "accessibility": "Accessibility",
@@ -117,196 +122,196 @@
     "ai-ml": {
       "hero": {
         "title": "Artificial Intelligence & Machine Learning",
-        "tagline": "From foundations to deployment: modern AI methods, model systems, and applied practice.",
-        "cta": "Apply Now"
+        "tagline": "A proposed area of study in AI foundations, application development and evaluation.",
+        "cta": "Discuss Your Learning Goals"
       },
       "overview": {
-        "title": "Program Overview",
-        "goal": "Prepare students for careers in AI engineering, data science, and ML operations.",
-        "audience": "International students seeking a U.S. transfer pathway with a focus on AI careers."
+        "title": "Program Concept",
+        "goal": "Develop the ability to frame an AI problem, build a working application and assess its limitations using data and reproducible tests.",
+        "audience": "For learners building AI foundations or preparing for further study and applied technical work. A suitable starting point depends on prior mathematics and programming experience."
       },
       "courses": {
-        "title": "Curriculum",
+        "title": "Proposed Curriculum",
         "coreList": [
-          "Introduction to Machine Learning",
-          "Deep Learning & Neural Networks",
-          "Natural Language Processing",
-          "Computer Vision",
-          "MLOps & Model Deployment"
+          "Mathematics, Statistics & Machine Learning",
+          "Deep Learning & Model Behavior",
+          "Language and Vision Applications",
+          "AI Systems & Application Development",
+          "Evaluation, Reliability & Responsible AI"
         ],
         "electiveList": [
           "Reinforcement Learning",
-          "AI Ethics & Policy",
-          "Applied Statistics"
+          "AI for Science",
+          "AI in Finance"
         ]
       },
       "outcomes": {
-        "title": "Learning Outcomes",
+        "title": "Intended Evidence of Learning",
         "items": [
-          "Build and deploy production ML models",
-          "Work with real-world datasets at scale",
-          "Apply AI to solve domain-specific problems",
-          "Contribute to open-source AI projects"
+          "A working AI application with a documented problem and baseline",
+          "An evaluation report covering errors, limitations and responsible use",
+          "A reproducible project package with data and method documentation",
+          "An individual explanation of model choices, AI assistance and revisions"
         ]
       },
       "requirements": {
-        "title": "Admission Requirements",
+        "title": "Background for an Advising Conversation",
         "items": [
-          "Bachelor's degree or equivalent",
-          "English proficiency (TOEFL 80+ or IELTS 6.5+)",
-          "Basic programming experience (Python preferred)"
+          "Describe your mathematics and programming background.",
+          "Share your learning goals and any previous project work.",
+          "Language expectations and prerequisites will be specified for each confirmed offering."
         ]
       },
       "details": {
-        "formatTitle": "Format and timeline",
+        "formatTitle": "Proposed Learning Format",
         "formatItems": [
-          "Instructor-led study with project work and guided independent practice.",
-          "Typical preparation plans can be adjusted by student background and institutional requirements.",
-          "Courses may be delivered online, hybrid, or through approved partner settings."
+          "Guided subject study, AI-supported practice and independent work.",
+          "Project cycles with mentoring, tests, feedback and revision.",
+          "Delivery mode, duration and enrollment arrangements will be published when confirmed."
         ],
-        "assessmentTitle": "Assessment",
+        "assessmentTitle": "Proposed Assessment",
         "assessmentItems": [
-          "Programming or applied assignments where relevant.",
-          "Portfolio-style projects and written reflections.",
-          "Progress checks aligned to the pathway goal rather than unsupported outcome guarantees."
+          "Compare the application against a stated baseline and test cases.",
+          "Document failure cases, data limitations and how AI-generated material was checked.",
+          "Demonstrate the system and explain your own decisions and contribution."
         ],
-        "applicationTitle": "Application steps",
+        "applicationTitle": "Inquiry Steps",
         "applicationItems": [
-          "Share your academic background and intended pathway.",
-          "Complete an advising conversation and readiness review.",
-          "Receive a recommended preparation plan and next steps."
+          "Share your background, goals and intended area of study.",
+          "Discuss your preparation needs and the current scope of TIAI support.",
+          "Review confirmed program details and any institution-specific requirements before making an application."
         ],
-        "disclaimer": "This program description is for preparation and advising. Admission, credit, transfer, transcript, and degree decisions are made only by authorized institutions under their own policies."
+        "disclaimer": "This proposed learning area is open for inquiry. Delivery and enrollment depend on confirmed arrangements and applicable approvals. TIAI does not award degrees or promise admission, credit, transfer, employment or accreditation. Academic decisions remain with authorized institutions under their own policies."
       }
     },
     "cs": {
       "hero": {
         "title": "Computer Science & Software Engineering",
-        "tagline": "Transfer-aligned CS curriculum including algorithms, systems, and engineering methods.",
-        "cta": "Apply Now"
+        "tagline": "A proposed area of study linking computing foundations with responsible AI-assisted software development.",
+        "cta": "Discuss Your Learning Goals"
       },
       "overview": {
-        "title": "Program Overview",
-        "goal": "Build foundational CS competency aligned to U.S. university transfer requirements.",
-        "audience": "Students seeking accredited U.S. CS credits through structured 2+2 transfer pathways."
+        "title": "Program Concept",
+        "goal": "Build the ability to reason about algorithms and systems, develop working software and verify code created with AI assistance.",
+        "audience": "For learners establishing computing foundations, preparing for further study or developing software engineering skills. Preparation is adapted to prior study and experience."
       },
       "courses": {
-        "title": "Curriculum",
+        "title": "Proposed Curriculum",
         "coreList": [
-          "Data Structures & Algorithms",
-          "Operating Systems",
-          "Computer Networks",
-          "Software Engineering",
-          "Database Systems"
+          "Programming, Data Structures & Algorithms",
+          "Operating Systems & Networks",
+          "Software Design & Engineering",
+          "Database Systems",
+          "AI-Assisted Development & Software Testing"
         ],
         "electiveList": [
           "Cloud Computing",
           "Cybersecurity Fundamentals",
-          "Mobile Application Development"
+          "Human-Computer Interaction"
         ]
       },
       "outcomes": {
-        "title": "Learning Outcomes",
+        "title": "Intended Evidence of Learning",
         "items": [
-          "Prepare for transfer-oriented CS study under institution-specific requirements",
-          "Solve algorithmic problems at industry standard",
-          "Design and build full-stack software systems",
-          "Apply software engineering best practices"
+          "A software project with clear requirements and design decisions",
+          "A test suite covering expected behavior and failure cases",
+          "A record of code reviews, revisions and use of AI tools",
+          "An individual demonstration and explanation of the system"
         ]
       },
       "requirements": {
-        "title": "Admission Requirements",
+        "title": "Background for an Advising Conversation",
         "items": [
-          "High school diploma or equivalent",
-          "English proficiency (TOEFL 70+ or IELTS 6.0+)",
-          "Basic math background (pre-calculus or above)"
+          "Describe your mathematics and prior coding experience.",
+          "Share your intended field of study or a software problem you want to explore.",
+          "Any academic, language or transfer requirements depend on the relevant confirmed offering and institution."
         ]
       },
       "details": {
-        "formatTitle": "Format and timeline",
+        "formatTitle": "Proposed Learning Format",
         "formatItems": [
-          "Instructor-led study with project work and guided independent practice.",
-          "Typical preparation plans can be adjusted by student background and institutional requirements.",
-          "Courses may be delivered online, hybrid, or through approved partner settings."
+          "Guided subject study, AI-supported practice and independent work.",
+          "Project cycles with mentoring, tests, feedback and revision.",
+          "Delivery mode, duration and enrollment arrangements will be published when confirmed."
         ],
-        "assessmentTitle": "Assessment",
+        "assessmentTitle": "Proposed Assessment",
         "assessmentItems": [
-          "Programming or applied assignments where relevant.",
-          "Portfolio-style projects and written reflections.",
-          "Progress checks aligned to the pathway goal rather than unsupported outcome guarantees."
+          "Test software against its requirements, including failure and boundary cases.",
+          "Explain and review AI-assisted code, documenting corrections and trade-offs.",
+          "Demonstrate a working system and account for individual contributions."
         ],
-        "applicationTitle": "Application steps",
+        "applicationTitle": "Inquiry Steps",
         "applicationItems": [
-          "Share your academic background and intended pathway.",
-          "Complete an advising conversation and readiness review.",
-          "Receive a recommended preparation plan and next steps."
+          "Share your background, goals and intended area of study.",
+          "Discuss your preparation needs and the current scope of TIAI support.",
+          "Review confirmed program details and any institution-specific requirements before making an application."
         ],
-        "disclaimer": "This program description is for preparation and advising. Admission, credit, transfer, transcript, and degree decisions are made only by authorized institutions under their own policies."
+        "disclaimer": "This proposed learning area is open for inquiry. Delivery and enrollment depend on confirmed arrangements and applicable approvals. TIAI does not award degrees or promise admission, credit, transfer, employment or accreditation. Academic decisions remain with authorized institutions under their own policies."
       }
     },
     "information-systems": {
       "hero": {
         "title": "Information Systems",
-        "tagline": "Business-aligned IS education connecting technology, data, and organizational needs.",
-        "cta": "Apply Now"
+        "tagline": "A proposed area of study connecting data, AI and the needs of organizations.",
+        "cta": "Discuss Your Learning Goals"
       },
       "overview": {
-        "title": "Program Overview",
-        "goal": "Develop IS professionals who can bridge technical and business domains.",
-        "audience": "Students targeting careers in IT management, data analytics, or enterprise systems."
+        "title": "Program Concept",
+        "goal": "Develop the ability to investigate a workflow, analyze data and evaluate whether a proposed information system supports its users.",
+        "audience": "For learners interested in business, data and technology, including those developing an interdisciplinary foundation for further study or professional practice."
       },
       "courses": {
-        "title": "Curriculum",
+        "title": "Proposed Curriculum",
         "coreList": [
-          "Enterprise Information Systems",
-          "Business Intelligence & Analytics",
-          "Database Design & Administration",
-          "IT Project Management",
-          "Systems Analysis & Design"
+          "Systems Analysis & Organizational Workflows",
+          "Database Design & Data Quality",
+          "Data Analytics & Decision Support",
+          "AI Applications in Organizations",
+          "Project Management & Data Governance"
         ],
         "electiveList": [
-          "Data Warehousing",
-          "ERP Systems",
-          "Digital Transformation Strategy"
+          "Business Intelligence",
+          "Enterprise Systems",
+          "Human-Centered Service Design"
         ]
       },
       "outcomes": {
-        "title": "Learning Outcomes",
+        "title": "Intended Evidence of Learning",
         "items": [
-          "Design and implement enterprise information systems",
-          "Analyze business data to support decision-making",
-          "Manage IT projects using industry frameworks",
-          "Bridge technical and business stakeholder needs"
+          "A documented user need and workflow analysis",
+          "A data analysis tool or system prototype with a validation plan",
+          "A report explaining data quality, privacy and decision limitations",
+          "An individual presentation connecting technical choices to user needs"
         ]
       },
       "requirements": {
-        "title": "Admission Requirements",
+        "title": "Background for an Advising Conversation",
         "items": [
-          "Bachelor's degree or equivalent",
-          "English proficiency (TOEFL 75+ or IELTS 6.0+)",
-          "Basic understanding of business operations"
+          "Describe your experience with business processes, data or technology.",
+          "Share a problem or organizational context you would like to study.",
+          "Required preparation and language expectations will be published for each confirmed offering."
         ]
       },
       "details": {
-        "formatTitle": "Format and timeline",
+        "formatTitle": "Proposed Learning Format",
         "formatItems": [
-          "Instructor-led study with project work and guided independent practice.",
-          "Typical preparation plans can be adjusted by student background and institutional requirements.",
-          "Courses may be delivered online, hybrid, or through approved partner settings."
+          "Guided subject study, AI-supported practice and independent work.",
+          "Project cycles with mentoring, tests, feedback and revision.",
+          "Delivery mode, duration and enrollment arrangements will be published when confirmed."
         ],
-        "assessmentTitle": "Assessment",
+        "assessmentTitle": "Proposed Assessment",
         "assessmentItems": [
-          "Programming or applied assignments where relevant.",
-          "Portfolio-style projects and written reflections.",
-          "Progress checks aligned to the pathway goal rather than unsupported outcome guarantees."
+          "Trace conclusions to data sources and check data quality.",
+          "Evaluate the prototype against stated user needs and relevant constraints.",
+          "Present findings, disclose AI use and explain your contribution and limitations."
         ],
-        "applicationTitle": "Application steps",
+        "applicationTitle": "Inquiry Steps",
         "applicationItems": [
-          "Share your academic background and intended pathway.",
-          "Complete an advising conversation and readiness review.",
-          "Receive a recommended preparation plan and next steps."
+          "Share your background, goals and intended area of study.",
+          "Discuss your preparation needs and the current scope of TIAI support.",
+          "Review confirmed program details and any institution-specific requirements before making an application."
         ],
-        "disclaimer": "This program description is for preparation and advising. Admission, credit, transfer, transcript, and degree decisions are made only by authorized institutions under their own policies."
+        "disclaimer": "This proposed learning area is open for inquiry. Delivery and enrollment depend on confirmed arrangements and applicable approvals. TIAI does not award degrees or promise admission, credit, transfer, employment or accreditation. Academic decisions remain with authorized institutions under their own policies."
       }
     }
   },
@@ -359,12 +364,12 @@
   },
   "About": {
     "heroTag": "About TIAI",
-    "heroTitle": "Institutional Mission and Standing",
-    "heroBody": "Texas Institute of Artificial Intelligence is a Texas nonprofit focused on rigorous, career-oriented AI and technology education delivered through accredited institutional partnerships.",
-    "missionTitle": "Mission",
-    "missionBody": "Expand access to high-quality AI education through accredited U.S. college partnerships, supporting international students toward technology careers via structured transfer pathways.",
-    "modelTitle": "Operating Model",
-    "modelBody": "TIAI operates as an instructional service partner. Academic authority — including curriculum approval, instructor credentialing, transcript issuance, and degree conferral — remains entirely with accredited partner institutions.",
+    "heroTitle": "AI Education and Applied Research",
+    "heroBody": "Texas Institute of Artificial Intelligence is a Texas nonprofit developing an AI-native approach to education. Our focus is on connecting academic foundations, applied work and evidence of individual capability.",
+    "missionTitle": "Our Purpose",
+    "missionBody": "Help learners use knowledge and AI responsibly in further study, professional practice and research. We aim to make the route from learning a concept to applying it, testing it and explaining the result clear and accessible.",
+    "modelTitle": "Our Role and Current Scope",
+    "modelBody": "TIAI develops educational concepts and welcomes discussions about curriculum, projects and learning support. Undergraduate preparation, master’s preparation and university-led master’s collaborations are planning directions subject to formal agreements and approvals. TIAI does not award degrees or issue transcripts; admission, credit and qualifications remain the responsibility of authorized institutions.",
     "legalTitle": "Legal & Registry Information",
     "reg1": "Legal Name: Texas Institute of Artificial Intelligence",
     "reg2": "Entity Type: Domestic Nonprofit Corporation (Texas)",
@@ -372,13 +377,13 @@
     "reg4": "Federal EIN: 37-2190000",
     "reg5": "Effective Date: August 11, 2025",
     "reg6": "Principal Office: 5900 Balcones Drive, Suite 100, Austin, TX 78731",
-    "valuesTitle": "Our Values",
-    "value1Title": "Employment First",
-    "value1Body": "Every curriculum decision is aligned to practical outcomes in AI, CS, and Information Systems careers.",
-    "value2Title": "Institutional Integrity",
-    "value2Body": "Academic authority remains with accredited partner colleges, including approvals, transcripts, and degrees.",
-    "value3Title": "Accessible Pathways",
-    "value3Body": "The 2+2 pathway model supports structured, cost-efficient transfer outcomes for international students."
+    "valuesTitle": "Principles for Learning and Assessment",
+    "value1Title": "Academic Depth",
+    "value1Body": "Use guided study and independent practice to develop subject knowledge, research literacy and the ability to transfer ideas to unfamiliar problems.",
+    "value2Title": "Judgment in AI Use",
+    "value2Body": "Learn to select tools, check evidence and recognize limitations. Take responsibility for the accuracy, ethics and consequences of the work.",
+    "value3Title": "Individual Contribution",
+    "value3Body": "Show what each learner understands and contributes through project records, tests and explanations. Use feedback to build capability and a credible portfolio."
   },
   "Cookie": {
     "message": "We use cookies to remember your language preference and improve your experience.",
@@ -487,5 +492,9 @@
       "Students receive a clear explanation of what TIAI can support and what it cannot promise."
     ],
     "disclaimer": "TIAI does not promise admission, transfer, credit recognition, visa approval, employment, or degree completion. Program outcomes depend on student performance and the policies of relevant institutions and agencies."
+  },
+  "Metadata": {
+    "title": "Texas Institute of Artificial Intelligence | AI Education",
+    "description": "TIAI is a Texas nonprofit developing AI-native education through academic foundations, applied projects and evidence-based assessment."
   }
 }
